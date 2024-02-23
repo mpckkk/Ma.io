@@ -4,7 +4,7 @@
 // 此文件为 commonjs 规范，无法使用 import
 
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://webjam.cn',
+  siteUrl: process.env.SITE_URL || 'https://brian.style',
   generateRobotsTxt: true,
   generateIndexSitemap: false,
 };

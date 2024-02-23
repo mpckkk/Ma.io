@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://webjam.cn
+Host: https://brian.style
 
 # Sitemaps
-Sitemap: https://webjam.cn/sitemap.xml
+Sitemap: https://brian.style/sitemap.xml

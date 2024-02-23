@@ -25,7 +25,7 @@
 .article a[href^='http']::before {
   background-image: url('/icons/brand/link.svg');
 }
-.article a[href*='webjam.cn']::before,
+.article a[href*='brian.style']::before,
 .article a[href^='/']::before,
 .article a[href^='#']::before {
   background-image: url('/images/logo.jpg');
