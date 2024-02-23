@@ -39,7 +39,7 @@ export const MENU_ITEMS: MenuItemProps[] = [
     title: 'Dashboard',
     href: '/dashboard',
     icon: <DashboardIcon size={iconSize} />,
-    isShow: false,
+    isShow: true,
     isExternal: false,
     eventName: 'Pages: Dashboard',
     type: 'Pages',
