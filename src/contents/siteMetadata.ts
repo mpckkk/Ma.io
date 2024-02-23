@@ -3,7 +3,7 @@ export const siteMetadata = {
   siteRepo: 'https://github.com/BrianShenCC/brian.style',
   siteLogo: '/images/logo.png',
   siteShortTitle: 'Brian',
-  // siteTitle: "前端果酱开发历险记- Wencai's coding journey",
+  siteTitle: "Brian's coding journey",
   siteScreenshot: '',
   siteDescription:
     'Self-motivated and creative developer. With more than 10 years of work experience in the tech industry, I strive to create responsive and user-friendly websites and web applications. Front-end addicted, Fullstack capable, with a strong emphasis on Typescript.',
