@@ -40,15 +40,15 @@ export const siteMetadata = {
  * Visit each provider's documentation link and follow the instructions, then add the environment variable to your project.
  */
 export const commentConfig = {
-  enable: false,
+  enable: true,
   provider: 'giscus',
   // https://giscus.app/
   giscusConfig: {
-    gitUsername: '',
-    repo: '', // process.env.GISCUS_REPO
-    repositoryId: '', // process.env.GISCUS_REPOSITORY_ID
-    category: '', // process.env.GISCUS_CATEGORY
-    categoryId: '', // process.env.GISCUS_CATEGORY_ID
+    gitUsername: 'BrianShenCC',
+    repo: 'brian.style', // process.env.GISCUS_REPO
+    repositoryId: 'R_kgDOLMlj6g', // process.env.GISCUS_REPOSITORY_ID
+    category: 'Announcements', // process.env.GISCUS_CATEGORY
+    categoryId: 'DIC_kwDOLMlj6s4CdnEb', // process.env.GISCUS_CATEGORY_ID
     mapping: 'title',
     reactions: true,
     metadata: '0',
