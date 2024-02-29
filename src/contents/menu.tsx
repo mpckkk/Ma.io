@@ -48,7 +48,7 @@ export const MENU_ITEMS: MenuItemProps[] = [
     title: 'Projects',
     href: '/projects',
     icon: <ProjectIcon size={iconSize} />,
-    isShow: true,
+    isShow: false,
     isExternal: false,
     eventName: 'Pages: Projects',
     type: 'Pages',
