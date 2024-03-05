@@ -6,8 +6,8 @@ import Container from '@/common/components/elements/Container';
 import PageHeading from '@/common/components/elements/PageHeading';
 import { getCollection } from '@/common/libs/mdx';
 import { MdxFileContentProps } from '@/common/types/snippets';
-import { siteMetadata } from '@/contents/siteMetadata';
 import { BrandIcon } from '@/common/types/StackIcon';
+import { siteMetadata } from '@/contents/siteMetadata';
 
 interface ContentPageProps {
   contentList: MdxFileContentProps[];
@@ -18,13 +18,14 @@ const SnippetsContentPage: NextPage<ContentPageProps> = ({ contentList }) => {
     return null;
   }
 
-  const title = '代码段';
-  const description = '这里是代码片段，可以直接过来拷贝使用';
+  const title = 'Code Snippets';
+  const description =
+    'Here is a code snippet, you can directly copy and use it.';
 
   const canonicalUrl = `${siteMetadata.siteUrl}/snippets`;
 
   const activeClasses = `flex justify-between w-full font-sora items-center gap-2 rounded-lg group
-    text-neutral-700 dark:text-neutral-400 hover:text-neutral-900 hover:dark:text-neutral-300 
+    text-neutral-700 dark:text-neutral-400 hover:text-neutral-900 hover:dark:text-neutral-300
      hover:dark:!text-neutral-300 hover:lg:rounded-lg lg:transition-all lg:duration-300
   `;
   return (
