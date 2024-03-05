@@ -1,18 +1,20 @@
 ---
 id: 0
-title: 'Introduction'
+title: '1. Introduction'
 category: 'Typescript Decorator'
 language: 'Typescript'
 difficulty: 'Medium'
 source: null
 source_url: null
-created_at: '2023-09-12'
-updated_at: '2023-09-12'
+created_at: '2024-02-29'
+updated_at: '2024-03-05'
 is_playground: false
 is_comment: false
 ---
 
 Decorators are a special type of declaration that can be attached to class declarations, methods, accessors, properties, or parameters. Decorators use the `@expression` form, where `expression` must evaluate to a function. It is called at runtime, with the decorated declaration information passed as a parameter. Decorators are generally used to handle logic unrelated to the class or its properties. For example, measuring the execution time of a class method or logging can be written as a separate decorator. In Node.js, a framework that uses decorators well is NestJS. However, if you are not familiar with it, it's okay. I will explain the use of decorators according to my understanding. To enable the decorator feature, please enable the `experimentalDecorators` compiler option in `tsconfig.json`.
+Document in this article is based on [decorators](https://www.typescriptlang.org/docs/handbook/decorators.html), but examples are written in a way which could be used in nestjs.
+
 
 ## Quick Start
 
@@ -100,11 +102,11 @@ export const exp1 = () => {
 ## Decorator types
 
 There are several types of decorators in <b>Typescript</b>:
-- Parameter decorators
-- Method decorators
-- Accessor decorators
-- Property decorators
 - Class decorators
+- Property decorators
+- Method decorators
+- Parameter decorators
+- Accessor decorators
 
 Each of these decorators can work on the class prototype (_prototype_ attribute) and the class itself, respectively
 
