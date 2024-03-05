@@ -60,6 +60,7 @@ import git from '~public/icons/stack/git.svg';
 import k8s from '~public/icons/stack/k8s.svg';
 import postcss from '~public/icons/stack/postcss.svg';
 import tailwindcss from '~public/icons/stack/tailwind-css.svg';
+import rxjs from '~public/icons/stack/rxjs.png';
 
 export const StackIconsMap = {
   gitlab,
@@ -124,6 +125,7 @@ export const StackIconsMap = {
   k8s,
   postcss,
   tailwindcss,
+  rxjs,
 };
 
 export function BrandIcon(props: {
