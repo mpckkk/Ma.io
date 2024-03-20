@@ -1,0 +1,155 @@
+---
+title: Algolia integration
+slug: blog-search
+summary: 'Integrate Algolia search into your personal blog.'
+date: '2024-03-20'
+featured: true
+tags:
+  - blog
+draft: true
+featured_image_url: https://raw.githubusercontent.com/BrianShenCC/pictures/main/image-20240320222655721.png
+---
+
+Algolia is a powerful Search-as-a-Service platform that provides effortless search experiences to your users. It's doc seach engine for react, next, etc.  It offers advanced functionalities like a full-text search, multi-attribute search, faceting and filtering, which ensure accurate and dynamic results. This article will guide you on how to use Algolia to set up a premium search experience on your Web.
+
+## Sign Up & Create an Index
+
+The first step to start using Algolia is to register on their [official website](https://www.algolia.com/). Once registered, you’ll be taken to the Algolia Dashboard, where you need to create an ‘Application.’ An ‘Application’ in Algolia is like a database where all your data is stored for search.
+
+![image-20240320224046427](https://raw.githubusercontent.com/BrianShenCC/pictures/main/image-20240320224046427.png)
+
+## Setup your Algolia crawler workflow
+
+Once you create an Index, you can setup your github Algolia crawler workflow with ALGOLIA_APP_ID and ALGOLIA_API_KEY(Admin API Key).
+
+Add secrets to your Github repository, and deploy your site will trigger the crawler.
+
+```
+name: docsearch
+
+on:
+   - workflow_dispatch
+   - deployment
+jobs:
+  algolia:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Get the content of docsearch.json as config
+        id: algolia_config
+        run: echo "::set-output name=config::$(cat docsearch.json | jq -r tostring)"
+
+      - name: Run algolia/docsearch-scraper image
+        env:
+          ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
+          ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
+          CONFIG: ${{ steps.algolia_config.outputs.config }}
+        run: |
+          docker run \
+            --env APPLICATION_ID=${ALGOLIA_APP_ID} \
+            --env API_KEY=${ALGOLIA_API_KEY} \
+            --env "CONFIG=${CONFIG}" \
+            algolia/docsearch-scraper
+```
+
+setup a crawler config in root dir.
+
+<b>docsearch.json</b>
+
+```json
+{
+  "index_name": "xxxx",
+  "start_urls": ["https://example.com"],
+  "sitemap_urls": ["https://example.com"],
+  "selectors": {
+    "lvl0": {
+      "selector": "(//ul[contains(@class,'menu__list')]//a[contains(@class, 'menu__link menu__link--sublist menu__link--active')]/text() | //nav[contains(@class, 'navbar')]//a[contains(@class, 'navbar__link--active')]/text())[last()]",
+      "type": "xpath",
+      "global": true,
+      "default_value": "Documentation"
+    },
+    "lvl1": "header h1, article h1",
+    "lvl2": "article h2",
+    "lvl3": "article h3",
+    "lvl4": "article h4",
+    "lvl5": "article h5, article td:first-child",
+    "lvl6": "article h6",
+    "text": "article p, article li, article td:last-child"
+  },
+  "custom_settings": {
+    "attributesForFaceting": ["type", "lang", "language", "version", "docusaurus_tag"],
+    "attributesToRetrieve": ["hierarchy", "content", "anchor", "url", "url_without_anchor", "type"],
+    "attributesToHighlight": ["hierarchy", "content"],
+    "attributesToSnippet": ["content:10"],
+    "camelCaseAttributes": ["hierarchy", "content"],
+    "searchableAttributes": [
+      "unordered(hierarchy.lvl0)",
+      "unordered(hierarchy.lvl1)",
+      "unordered(hierarchy.lvl2)",
+      "unordered(hierarchy.lvl3)",
+      "unordered(hierarchy.lvl4)",
+      "unordered(hierarchy.lvl5)",
+      "unordered(hierarchy.lvl6)",
+      "content"
+    ],
+    "distinct": true,
+    "attributeForDistinct": "url",
+    "customRanking": ["desc(weight.pageRank)", "desc(weight.level)", "asc(weight.position)"],
+    "ranking": ["words", "filters", "typo", "attribute", "proximity", "exact", "custom"],
+    "highlightPreTag": "<span class='algolia-docsearch-suggestion--highlight'>",
+    "highlightPostTag": "</span>",
+    "minWordSizefor1Typo": 3,
+    "minWordSizefor2Typos": 7,
+    "allowTyposOnNumericTokens": false,
+    "minProximity": 1,
+    "ignorePlurals": true,
+    "advancedSyntax": true,
+    "attributeCriteriaComputedByMinProximity": true,
+    "removeWordsIfNoResults": "allOptional",
+    "separatorsToIndex": "_",
+    "synonyms": [
+      ["js", "javascript"],
+      ["ts", "typescript"]
+    ]
+  }
+}
+```
+
+## Run crawler locally
+
+run docker command
+
+```bash
+docker run -it --env-file=.env -e "CONFIG=$(cat docsearch.json | jq -r tostring)" algolia/docsearch-scraper
+```
+
+Then wait for the container to run and crawl your website. Finally, open the Algolia console and if the following page is displayed, it means success.
+
+![image-20210821225934002](https://raw.githubusercontent.com/BrianShenCC/pictures/main/image-20210821225934002.png)
+
+ You must ensure that the project is successfully deployed before triggering.
+
+## Add search component
+
+At last, you can easily use [DocSearch](https://github.com/algolia/docsearch) to integrate the document search feature into your React blog system.
+
+```typescript
+import { DocSearch } from '@docsearch/react';
+
+import '@docsearch/css';
+
+function App() {
+  return (
+    <DocSearch
+      appId="YOUR_APP_ID"
+      indexName="YOUR_INDEX_NAME"
+      apiKey="YOUR_SEARCH_API_KEY" // Search-Only API Key
+    />
+  );
+}
+
+export default App;
+```
+
+![image-20240320232354568](https://raw.githubusercontent.com/BrianShenCC/pictures/main/image-20240320232354568.png)

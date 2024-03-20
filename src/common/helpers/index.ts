@@ -83,7 +83,7 @@ export const formatExcerpt = (content: string, maxLength = 100) => {
   return trimmed + (cleanedContent.length > maxLength ? '...' : '');
 };
 
-export const calculateReadingTime = (content: string, wordsPerMinute = 5) => {
+export const calculateReadingTime = (content: string, wordsPerMinute = 40) => {
   const cleanedContent = formatExcerpt(content);
   const readingTimeMinutes = Math.ceil(
     cleanedContent.split(/\s+/).length / wordsPerMinute
