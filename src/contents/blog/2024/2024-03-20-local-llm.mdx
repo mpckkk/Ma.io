@@ -1,0 +1,46 @@
+---
+title: Run llm services on local machine
+slug: local-llm
+summary: 'Deploy large language models (LLM) offline using LM Studio.'
+date: '2024-03-20'
+featured: true
+tags:
+  - blog
+draft: true
+featured_image_url: https://raw.githubusercontent.com/BrianShenCC/pictures/main/image-20240320233913850.png
+---
+
+## Why deploy locally?
+Convenient, can try various models, no need to rent servers, effectively utilize your own graphics card or CPU. No need to worry about privacy, feel free to ask any questions. Low latency, fast speed. Free.
+
+## What are the hardware requirements?
+Many lightweight models can be used on ultrabooks. With a graphics card, larger models can be used. On a Macbook, the video memory and RAM are shared. The M3max can have a maximum of 128GB of video memory, which has an advantage in running model inference. The M1max Macbook I am using has 32GB of RAM, which is already capable of running most large models on HuggingFace.
+
+### Install LM Studio
+<img src="https://raw.githubusercontent.com/BrianShenCC/pictures/main/image-20240320234703205.png" alt="image-20240320234703205" style="zoom:33%;" />
+
+Installation successful, after opening, the following interface should appear.
+
+![img](https://raw.githubusercontent.com/BrianShenCC/pictures/main/v2-08bd9f89842849839b9ec45136817a30_1440w.webp)
+
+
+
+### Pick your modal
+Generally found on huggingface.
+
+The important factor is the size, which refers to the number of parameters. The model size is usually indicated in the name, such as Dolphin 2.6 Mistral 7b - DPO Laser, which means it has a size of 7B, or 7 billion parameters. Choose based on the memory and graphics memory capacity of your computer (if running on CPU, consider memory; if running on GPU, consider graphics memory; if running on a hybrid system, consider both). My computer has 32GB of graphics memory, and I use a 13B model.
+
+Next is the model metrics. Currently, there are hundreds or thousands of LLMs on huggingface, and you can choose based on benchmark performance. The ranking webpage is available here: Open LLM Leaderboard - a Hugging Face Space by HuggingFaceH4.
+
+There are also model characteristics to consider, such as whether it has been reviewed and what type of work it is suitable for.
+
+### Run your modal
+
+1. You can use LM studio locally for chatting.
+
+   ![image-20240320235817533](https://raw.githubusercontent.com/BrianShenCC/pictures/main/image-20240320235817533.png)
+
+2. Start the local service in LM studio to enable other local projects to access the capabilities of the selected large model.
+
+   ![image-20240320235858313](https://raw.githubusercontent.com/BrianShenCC/pictures/main/image-20240320235858313.png)
+
