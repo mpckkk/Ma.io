@@ -77,7 +77,7 @@ export const author = {
   locationIcon: '🇨🇦',
   position: 'Full Stack Web Developer',
   calMeetingUrl: '',
-  status: 'Working remotely around the world',
+  status: 'Restart in Fredericton',
   workingOn: `I am learning and practicing the latest AI technology.`,
   workTogether: `I'm open for new opportunities, feel free to email me to see how can we collaborate.`,
   wakatime: 'https://wakatime.com/@BrianShen',
