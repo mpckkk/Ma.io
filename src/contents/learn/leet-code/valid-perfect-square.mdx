@@ -1,0 +1,28 @@
+---
+id: 367
+title: 'Valid Perfect Square'
+category: 'Algorithm'
+language: 'JavaScript'
+difficulty: 'Easy'
+created_at: '2024-06-12'
+updated_at: '2024-06-12'
+is_playground: true
+is_comment: true
+---
+
+> Problem
+https://leetcode.com/problems/valid-perfect-square/
+
+> Solution
+
+``` typescript
+function isPerfectSquare(num: number): boolean {
+    if (num === 1) return true;
+    const half = num / 2;
+    for (let i = 1; i <= half; i++) {
+        if (num === i * i)
+            return true
+    }
+    return false;
+};
+```
