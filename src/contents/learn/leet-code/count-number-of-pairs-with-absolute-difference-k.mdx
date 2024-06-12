@@ -1,0 +1,37 @@
+---
+id: 2006
+title: 'Count Number of Pairs With Absolute Difference K'
+category: 'Algorithm'
+language: 'JavaScript'
+difficulty: 'Easy'
+created_at: '2024-06-12'
+updated_at: '2024-06-12'
+is_playground: true
+is_comment: true
+---
+
+> Problem
+https://leetcode.com/problems/count-number-of-pairs-with-absolute-difference-k/description/
+
+> Solution
+
+``` typescript
+function countKDifference(nums: number[], k: number): number {
+    if (nums.length === 0) {
+        return 0
+    }
+    let result = 0;
+    const l = nums.length;
+
+    for (let i = 0; i <= l; i++) {
+        let first = nums[i];
+        for (let j = i + 1; j <= l; j++) {
+            const second = nums[j];
+            if (second - first === k || first - second === k) {
+                result++;
+            }
+        }
+    }
+    return result;
+};
+```
