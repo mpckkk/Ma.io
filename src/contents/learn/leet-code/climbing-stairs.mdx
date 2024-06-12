@@ -1,0 +1,31 @@
+---
+id: 70
+title: 'Climbing Stairs'
+category: 'Algorithm'
+language: 'JavaScript'
+difficulty: 'Easy'
+created_at: '2024-06-12'
+updated_at: '2024-06-12'
+is_playground: true
+is_comment: true
+---
+
+> Problem
+https://leetcode.com/problems/climbing-stairs/
+
+> Solution
+
+``` typescript
+function climbStairs(n: number): number {
+    if (n === 1) return 1;
+    if (n === 2) return 2;
+    let results = [1,2];
+    let result = 0;
+    for (let i = 3; i <= n; i++) {
+        result = results[0] + results[1];
+        results.push(result);
+        results.shift();
+    }
+    return result;
+};
+```
