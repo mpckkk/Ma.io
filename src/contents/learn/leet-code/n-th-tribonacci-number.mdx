@@ -1,0 +1,32 @@
+---
+id: 1137
+title: 'N-th Tribonacci Number'
+category: 'Algorithm'
+language: 'JavaScript'
+difficulty: 'Easy'
+created_at: '2024-06-12'
+updated_at: '2024-06-12'
+is_playground: true
+is_comment: true
+---
+
+> Problem
+https://leetcode.com/problems/n-th-tribonacci-number/
+
+> Solution
+
+``` typescript
+function tribonacci(n: number): number {
+    if (n === 0) return 0;
+    if (n === 1) return 1;
+    if (n === 2) return 1;
+    let results = [0, 1, 1];
+    let result = 0;
+    for (let i = 3; i <= n; i++) {
+        result = results[0] + results[1] + results[2];
+        results.push(result);
+        results.shift();
+    }
+    return result;
+};
+```
