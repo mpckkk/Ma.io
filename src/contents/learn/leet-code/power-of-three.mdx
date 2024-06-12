@@ -1,53 +1,55 @@
 ---
-id: 231
+id: 326
 title: 'Power of Two'
 category: 'Algorithm'
 language: 'JavaScript'
 difficulty: 'Easy'
-created_at: '2024-06-11'
-updated_at: '2024-06-11'
+created_at: '2024-06-12'
+updated_at: '2024-06-12'
 is_playground: true
 is_comment: true
 ---
 
 > Problem
+Given an integer n, return true if it is a power of three. Otherwise, return false.
 
-Given an integer `n`, return *`true` if it is a power of two. Otherwise, return `false`*.
+Given an integer `n`, return *`true` if it is a power of three. Otherwise, return `false`*.
 
-An integer `n` is a power of two, if there exists an integer `x` such that `n == 2x`.
+An integer `n` is a power of three, if there exists an integer `x` such that `n == 3x`.
 
-
+ 
 
 **Example 1:**
 
 ```
-Input: n = 1
+Input: n = 27
 Output: true
-Explanation: 20 = 1
+Explanation: 27 = 33
 ```
 
 **Example 2:**
 
 ```
-Input: n = 16
-Output: true
-Explanation: 24 = 16
+Input: n = 0
+Output: false
+Explanation: There is no x where 3x = 0.
 ```
 
 **Example 3:**
 
 ```
-Input: n = 3
+Input: n = -1
 Output: false
+Explanation: There is no x where 3x = (-1).
 ```
 
-
+ 
 
 **Constraints:**
 
 - `-231 <= n <= 231 - 1`
 
-
+ 
 
 **Follow up:** Could you solve it without loops/recursion?
 
