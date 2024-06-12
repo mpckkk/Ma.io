@@ -1,0 +1,29 @@
+---
+id: 1492
+title: 'The kth Factor of n'
+category: 'Algorithm'
+language: 'JavaScript'
+difficulty: 'Easy'
+created_at: '2024-06-12'
+updated_at: '2024-06-12'
+is_playground: true
+is_comment: true
+---
+
+> Problem
+https://leetcode.com/problems/the-kth-factor-of-n/
+
+> Solution
+
+``` typescript
+function kthFactor(n: number, k: number): number {
+
+    let arr = [];
+    for (let i = 1; i <= n; i++) {
+        if (n % i === 0) {
+            arr.push(i);
+        }
+    }
+    return k <= arr.length ? arr[k - 1] : -1
+};
+```
