@@ -1,0 +1,57 @@
+---
+id: 912
+title: 'Sort an Array'
+category: 'Algorithm'
+language: 'TypeScript'
+difficulty: 'Easy'
+created_at: '2024-06-13'
+updated_at: '2024-06-13'
+is_playground: true
+is_comment: true
+---
+
+> Problem
+https://leetcode.com/problems/sort-an-array/
+
+> Solution with Quick Sort
+
+``` typescript
+function swapTwoNumber(nums: number[], i: number, j: number) {
+    if (nums[j] === nums[i]) return
+    const temp = nums[j];
+    nums[j] = nums[i];
+    nums[i] = temp;
+}
+
+function partition(nums: number[], start: number, end: number) {
+    const idx = Math.floor(Math.random() * (start - end + 1) + end);
+    const select = nums[idx];
+    swapTwoNumber(nums, idx, start);
+    let i = start;
+    let j = i + 1;
+    while (i <= end) {
+        if (nums[i] < select) {
+            swapTwoNumber(nums, i, j);
+            j++;
+        }
+        i++;
+    }
+    swapTwoNumber(nums, start, j - 1);
+    return j - 1;
+}
+
+function quickSort(nums: number[], start: number, end: number) {
+    if (start < end) {
+        const mid = partition(nums, start, end);
+        quickSort(nums, start, mid - 1);
+        quickSort(nums, mid + 1, end);
+    }
+}
+
+
+function sortArray(nums: number[]): number[] {
+    if (new Set(nums).size === 1) return nums;
+    quickSort(nums, 0, nums.length - 1)
+    return nums;
+};
+```
