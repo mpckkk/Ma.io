@@ -1,0 +1,28 @@
+---
+id: 1470
+title: 'Shuffle the Array'
+category: 'Algorithm'
+language: 'TypeScript'
+difficulty: 'Easy'
+created_at: '2024-06-13'
+updated_at: '2024-06-13'
+is_playground: true
+is_comment: true
+---
+
+> Problem
+https://leetcode.com/problems/shuffle-the-array/
+
+> Solution
+
+``` typescript
+function shuffle(nums: number[], n: number): number[] {
+    const result = new Array(nums.length);
+    const half = nums.splice(n, n);
+    for (let i = 0; i < n; i++) {
+        result[2 * i] = nums[i];
+        result[2 * i + 1] = half[i];
+    }
+    return result;
+};
+```
