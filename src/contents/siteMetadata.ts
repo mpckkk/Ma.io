@@ -55,7 +55,7 @@ export const commentConfig = {
     lightTheme: 'light',
     darkTheme: 'transparent_dark',
     themeURL: '',
-    lang: 'zh-CN',
+    lang: 'en-US',
   },
 };
 
