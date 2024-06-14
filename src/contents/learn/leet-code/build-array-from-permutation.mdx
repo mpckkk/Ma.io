@@ -1,0 +1,22 @@
+---
+id: 1920
+title: 'Build Array from Permutation'
+category: 'Algorithm'
+language: 'TypeScript'
+difficulty: 'Easy'
+created_at: '2024-06-13'
+updated_at: '2024-06-13'
+is_playground: true
+is_comment: true
+---
+
+> Problem
+https://leetcode.com/problems/build-array-from-permutation/
+
+> Solution
+
+``` typescript
+function buildArray(nums: number[]): number[] {
+    return nums.map((v, i) => nums[nums[i]])
+};
+```
