@@ -1,0 +1,102 @@
+---
+title: Quick Sort
+slug: quick-sort
+summary: 'Quick Sort'
+date: '2024-01-01'
+featured: true
+tags:
+  - blog
+draft: true
+featured_image_url: https://raw.githubusercontent.com/BrianShenCC/pictures/main/65d5db665ae2b6b691e54ac6_modern-editing@2x.webp
+---
+## Preface
+
+> ​      "Quick Sort" is a sorting algorithm that utilizes the concept of "divide and conquer" for recursive calculation. It is one of the most efficient sorting algorithms and is commonly found in various textbooks on data structures. So, let me briefly explain it as well.
+
+### Algorithm purpose
+
+To turn the originally disordered array into an ordered one, it can be in "ascending order" or "descending order" (for the sake of uniform description, this article only discusses the case of "ascending order").
+
+### Algorithm Ideas
+
+Randomly find a position, put all numbers smaller than it to its "left", and put all numbers larger than it to its "right", then recursively solve the "left" and "right" sides separately to make both sides ordered.
+
+![img](https://raw.githubusercontent.com/BrianShenCC/pictures/main/849589-20171015230936371-1413523412.gif)
+
+### Core
+
+Recursion, a function calls itself by changing the arguments.
+
+Comparison, the use of relational operator less than(<).
+
+Divide and conquer, divide then conquer, break down the problem into two smaller problems and solve them separately.
+
+#### Implementation of Divide and Conquer
+
+The so-called "divide and conquer" is to divide a complex problem into two (or more) "sub-problems" that are the same or similar, and then divide the sub-problems into smaller "sub-problems"... until the final sub-problem can be simply solved directly, and the solution to the original problem is the combination of solutions to the "sub-problems".
+
+For "quick sort", we choose a pivot number, put all numbers less than it on its left side, and put all numbers greater than it on its right side. This process actually naturally isolates the numbers on the left side from those on the right side, making them "separated", so they can be managed separately.
+
+### Time complexity
+
+First, we analyze the cost of running a partition.
+
+In the implementation of Partition(l, r), there is only one for loop that iterates (r - l) times. Since r can be as large as n-1 and i can be as low as 0, the time complexity of partition is O(n).
+
+Similar to the analysis of merge sort, the time complexity of quicksort depends on how many times partition is called.
+
+When the array is already sorted in ascending order, quicksort will reach its worst-case time complexity. There are a total of n partitions, and the calculation for partition time is as follows: (n-1) + ... + 2 + 1 = n*(n-1) / 2.
+
+The overall time complexity is: O(n^2).
+
+When each partition always divides the array into two equal halves, quicksort's best case occurs, similar to merge sort. In this case, when this happens, the recursion depth is only O(logn). The overall time complexity becomes O(nlogn).
+
+#### Optimization plan
+
+"Quick Sort" is more efficient among many sorting algorithms, with an average time complexity of O(nlogn). However, when completely ordered, the worst-case time complexity reaches O(n^2).
+
+Therefore, every time we choose the pivot number, we can try to select it in a random way. This is called "Randomized Quick Sort".
+
+Imagine in the randomized version of quick sort, with randomized data perspective selection, we will not always get very poor partitions like 0, 1 and n-1. So the problem mentioned above will not occur.
+
+### Implementation
+
+``` typescript
+function swapTwoNumberInArray(nums: number[], i: number, j: number) {
+    if (nums[j] === nums[i]) return
+    const temp = nums[j];
+    nums[j] = nums[i];
+    nums[i] = temp;
+
+}
+
+function partition(nums: number[], start: number, end: number) {
+    const idx = Math.floor(Math.random() * (start - end + 1) + end);
+    const select = nums[idx];
+    swapTwoNumberInArray(nums, idx, start);
+    let i = start;
+    let j = i + 1;
+    while (i <= end) {
+        if (nums[i] < select) {
+            swapTwoNumberInArray(nums, i, j);
+            j++;
+        }
+        i++;
+    }
+    swapTwoNumberInArray(nums, start, j - 1);
+    return j - 1;
+}
+
+function quickSort(nums: number[], start: number, end: number) {
+    if (start < end) {
+        const mid = partition(nums, start, end);
+        quickSort(nums, start, mid - 1);
+        quickSort(nums, mid + 1, end);
+    }
+}
+function sortArray(nums: number[]): number[] {
+    if (new Set(nums).size === 1) return nums;
+    quickSort(nums, 0, nums.length - 1)
+    return nums;
+};
+```
