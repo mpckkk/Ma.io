@@ -1,0 +1,33 @@
+---
+id: 153
+title: 'Find Minimum in Rotated Sorted Array'
+category: 'Algorithm'
+language: 'TypeScript'
+difficulty: 'Easy'
+created_at: '2024-07-01'
+updated_at: '2024-07-01'
+is_playground: true
+is_comment: true
+---
+
+> Problem
+https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
+
+> Solution
+
+``` typescript
+function findMin(nums: number[]): number {
+    let left = 0;
+    let right = nums.length - 1;
+    if(left === right) return nums[left];
+    while (left !== right - 1) {
+        const mid = Math.ceil((left + right) / 2);
+        if (nums[right] < nums[left] && nums[right] < nums[mid]) {
+            left = mid;
+        } else {
+            right = mid;
+        }
+    }
+    return Math.min(nums[left], nums[right]);
+};
+```
