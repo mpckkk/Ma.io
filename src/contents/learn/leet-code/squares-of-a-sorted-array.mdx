@@ -1,0 +1,39 @@
+---
+id: 977
+title: 'Squares of a Sorted Array'
+category: 'Algorithm'
+language: 'TypeScript'
+difficulty: 'Easy'
+created_at: '2024-07-01'
+updated_at: '2024-07-01'
+is_playground: true
+is_comment: true
+---
+
+> Problem
+https://leetcode.com/problems/squares-of-a-sorted-array/
+
+> Solution
+
+``` typescript
+// using two pointers
+function sortedSquares(nums: number[]): number[] {
+    if (nums.length === 1) return [nums[0] * nums[0]];
+    let right = nums.length - 1;
+    let left = 0;
+    const result = new Array(nums.length);
+    let i = nums.length - 1;
+    while (left !== right) {
+        if (nums[right] * nums[right] > nums[left] * nums[left]) {
+            result[i] = (nums[right] * nums[right]);
+            right--;
+        } else {
+            result[i] = nums[left] * nums[left];
+            left++;
+        }
+        i--;
+    }
+    result[i] = (nums[left] * nums[left]);
+    return result;
+};
+```
