@@ -1,0 +1,32 @@
+---
+id: 2000
+title: 'Reverse Prefix of Word'
+category: 'Algorithm'
+language: 'TypeScript'
+difficulty: 'Easy'
+created_at: '2024-07-01'
+updated_at: '2024-07-01'
+is_playground: true
+is_comment: true
+---
+
+> Problem
+https://leetcode.com/problems/reverse-prefix-of-word
+
+> Solution
+
+``` typescript
+function reversePrefix(word: string, ch: string): string {
+    let i = word.indexOf(ch);
+    if (i === -1) return word;
+    const list = [...word];
+    const reverseList = list.splice(0, i + 1);
+    for (let j = 0; j <= i; j++) {
+        let val = reverseList[i];
+        reverseList[i] = reverseList[j]
+        reverseList[j] = val
+        i--
+    }
+    return reverseList.join("") + list.join("");
+};
+```
