@@ -1,0 +1,26 @@
+---
+id: 2108
+title: 'Find First Palindromic String in the Array'
+category: 'Algorithm'
+language: 'TypeScript'
+difficulty: 'Easy'
+created_at: '2024-06-13'
+updated_at: '2024-06-13'
+is_playground: true
+is_comment: true
+---
+
+> Problem
+https://leetcode.com/problems/find-first-palindromic-string-in-the-array/
+
+> Solution
+
+``` typescript
+function firstPalindrome(words: string[]): string {
+    return words.find(w => findPalindrome(w)) || '';
+};
+
+function findPalindrome(word: string): boolean {
+    return [...word].every((c, i) => c === word[word.length - i - 1])
+}
+```
