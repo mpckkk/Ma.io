@@ -1,0 +1,46 @@
+---
+id: 524
+title: 'Longest Word in Dictionary through Deleting'
+category: 'Algorithm'
+language: 'TypeScript'
+difficulty: 'Easy'
+created_at: '2024-07-01'
+updated_at: '2024-07-01'
+is_playground: true
+is_comment: true
+---
+
+> Problem
+https://leetcode.com/problems/longest-word-in-dictionary-through-deleting/
+
+> Solution
+
+``` typescript
+function findLongestWord(s: string, dictionary: string[]): string {
+    return dictionary.sort((a, b) => {
+        if (a.length !== b.length) return b.length - a.length;
+        return a < b ? -1 : 1;
+    }).find(word => canFindWord(s, word)) || ''
+};
+
+
+const canFindWord = (s: string, word: string): boolean => {
+    if (s === word) return true;
+    let j = 0;
+    for (let i = 0; i < word.length; i++) {
+        if (word[i] === s[j]) {
+            j++;
+            continue;
+        }
+        while (j <= s.length) {
+            if (word[i] === s[j]) {
+                j++;
+                break;
+            }
+            j++;
+        }
+        if (j >= s.length) return false;
+    }
+    return true;
+}
+```
