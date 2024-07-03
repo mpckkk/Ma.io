@@ -1,0 +1,38 @@
+---
+id: 283
+title: 'Move Zeroes'
+category: 'Algorithm'
+language: 'TypeScript'
+difficulty: 'Easy'
+created_at: '2024-07-02'
+updated_at: '2024-07-02'
+is_playground: true
+is_comment: true
+---
+
+> Problem
+https://leetcode.com/problems/move-zeroes/
+
+> Solution
+
+``` typescript
+/**
+ Do not return anything, modify nums in-place instead.
+ */
+function moveZeroes(nums: number[]): void {
+    let length = nums.length;
+    let fast = 0, slow = 0;
+
+    while (fast < length) {
+        if (nums[fast] !== 0) {
+            nums[slow] = nums[fast];
+            slow++;
+        }
+        fast++;
+    }
+    while (slow < length) {
+        nums[slow] = 0;
+        slow++
+    }
+};
+```
