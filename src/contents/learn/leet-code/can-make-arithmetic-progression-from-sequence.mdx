@@ -1,0 +1,42 @@
+---
+id: 1502
+title: 'Can Make Arithmetic Progression From Sequence'
+category: 'Algorithm'
+language: 'TypeScript'
+difficulty: 'Easy'
+created_at: '2024-07-04'
+updated_at: '2024-07-04'
+is_playground: true
+is_comment: true
+---
+
+> Problem
+https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence/
+
+> Solution
+
+``` typescript
+function canMakeArithmeticProgression(nums: number[]): boolean {
+    let count;
+    for (let i = 0; i < nums.length; i++) {
+        let max = i;
+        for (let j = i; j < nums.length; j++) {
+            if (nums[j] > nums[max]) {
+                max = j;
+            }
+        }
+        let tmp = nums[i];
+        nums[i] = nums[max];
+        nums[max] = tmp;
+        if (i == 0) {
+            continue;
+        } else if (i === 1) {
+            count = nums[i - 1] - nums[i];
+        } else if (nums[i - 1] - nums[i] !== count) {
+            return false;
+        }
+
+    }
+    return true
+};
+```
