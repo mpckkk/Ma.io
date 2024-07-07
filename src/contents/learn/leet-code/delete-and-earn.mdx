@@ -1,0 +1,33 @@
+---
+id: 740
+title: 'Delete and Earn'
+category: 'Algorithm'
+language: 'TypeScript'
+difficulty: 'Easy'
+created_at: '2024-07-06'
+updated_at: '2024-07-06'
+is_playground: true
+is_comment: true
+---
+
+> Problem
+https://leetcode.com/problems/delete-and-earn/
+
+> Solution
+
+``` typescript
+// 1 <= nums[i] <= 10000
+function deleteAndEarn(nums: number[]): number {
+    let arr = new Array(10001).fill(0);
+    let dp = new Array(10001).fill(-1);
+    for (let i = 0; i < nums.length; i++) {
+        arr[nums[i]] += nums[i];
+    }
+    dp[0] = 0;
+    dp[1] = arr[1];
+    for (let i = 2; i <= 10001; i++) {
+        dp[i] = Math.max(dp[i - 1], arr[i] + dp[i - 2])
+    }
+    return dp[10000];
+};
+```
