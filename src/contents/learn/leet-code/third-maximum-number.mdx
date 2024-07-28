@@ -1,0 +1,37 @@
+---
+id: 414
+title: 'Third Maximum Number'
+category: 'Algorithm'
+language: 'TypeScript'
+difficulty: 'Easy'
+created_at: '2024-07-28'
+updated_at: '2024-07-28'
+is_playground: true
+is_comment: true
+---
+
+> Problem
+https://leetcode.com/problems/third-maximum-number/
+
+> Solution
+
+``` typescript
+function thirdMax(nums: number[]): number {
+    let ignoreNums: number[] = [];
+    let max = getMax(nums, ignoreNums);
+    let maxCount = 0;
+    while (maxCount < 2) {
+        ignoreNums.push(max);
+        max = getMax(nums, ignoreNums);
+        maxCount++;
+    }
+    return max === -Infinity ? ignoreNums[0] : max;
+};
+
+function getMax(nums: number[], ignoreNums: number[]): number {
+    return nums.reduce((max, num) => {
+        if (ignoreNums.includes(num)) return max;
+        return num > max ? num : max;
+    }, -Infinity);
+}
+```

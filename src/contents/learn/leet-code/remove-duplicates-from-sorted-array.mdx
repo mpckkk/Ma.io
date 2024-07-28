@@ -1,0 +1,26 @@
+---
+id: 26
+title: 'Remove Duplicates from Sorted Array'
+category: 'Algorithm'
+language: 'TypeScript'
+difficulty: 'Easy'
+created_at: '2024-07-28'
+updated_at: '2024-07-28'
+is_playground: true
+is_comment: true
+---
+
+> Problem
+https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+
+> Solution
+
+``` typescript
+function removeDuplicates(nums: number[]): number {
+  const removed = Array.from(new Set(nums))
+  for(let i = 0; i < removed.length; i++) {
+    nums[i] = removed[i] ?? '_' as unknown as number;
+  }
+  return removed.length;
+};
+```
