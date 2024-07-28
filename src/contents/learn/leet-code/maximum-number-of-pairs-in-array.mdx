@@ -1,0 +1,42 @@
+---
+id: 2341
+title: 'Maximum Number of Pairs in Array'
+category: 'Algorithm'
+language: 'TypeScript'
+difficulty: 'Easy'
+created_at: '2024-07-28'
+updated_at: '2024-07-28'
+is_playground: true
+is_comment: true
+---
+
+> Problem
+https://leetcode.com/problems/maximum-number-of-pairs-in-array/
+
+> Solution
+
+``` typescript
+function numberOfPairs(nums: number[]): number[] {
+    let numberLeft = 0;
+    let numberPairs = 0;
+    const removedIndex = [];
+    nums.forEach((num, index) => {
+        if (removedIndex.includes(index)) {
+            return;
+        }
+        if (index === nums.length - 1) {
+            numberLeft += 1;
+            return;
+        }
+        const pairIndex = nums.indexOf(num, index + 1)
+        if (pairIndex === -1) {
+            numberLeft += 1;
+            return;
+        } else {
+            numberPairs += 1;
+            removedIndex.push(pairIndex);
+        }
+    });
+    return [numberPairs, numberLeft];
+};
+```
