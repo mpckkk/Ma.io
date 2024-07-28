@@ -1,0 +1,33 @@
+---
+id: 2535
+title: 'Difference Between Element Sum and Digit Sum of an Array'
+category: 'Algorithm'
+language: 'TypeScript'
+difficulty: 'Easy'
+created_at: '2024-07-28'
+updated_at: '2024-07-28'
+is_playground: true
+is_comment: true
+---
+
+> Problem
+https://leetcode.com/problems/difference-between-element-sum-and-digit-sum-of-an-array/
+
+> Solution
+
+``` typescript
+function differenceOfSum(nums: number[]): number {
+    const sum = nums.reduce((acc, num) => acc + num, 0);
+    const sum2 = nums.reduce((acc, num) => acc + count(num), 0);
+    return sum - sum2;
+};
+const count = (num: number) => {
+    let result = 0;
+    let temp = num;
+    while (temp / 10 > 0) {
+        result += temp % 10;
+        temp = (temp - temp % 10) / 10;
+    }
+    return result;
+}
+```

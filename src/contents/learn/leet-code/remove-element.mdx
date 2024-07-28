@@ -1,0 +1,26 @@
+---
+id: 27
+title: 'Remove Element'
+category: 'Algorithm'
+language: 'TypeScript'
+difficulty: 'Easy'
+created_at: '2024-07-28'
+updated_at: '2024-07-28'
+is_playground: true
+is_comment: true
+---
+
+> Problem
+https://leetcode.com/problems/remove-element/
+
+> Solution
+
+``` typescript
+function removeElement(nums: number[], val: number): number {
+    const filtered = nums.filter(num => num !== val);
+    nums.forEach((n, index) => {
+        nums[index] = filtered[index] ?? '_' as unknown as number;
+    })
+    return filtered.length;
+};
+```

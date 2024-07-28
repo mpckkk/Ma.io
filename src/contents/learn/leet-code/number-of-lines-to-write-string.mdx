@@ -1,0 +1,33 @@
+---
+id: 806
+title: 'Number of Lines To Write String'
+category: 'Algorithm'
+language: 'TypeScript'
+difficulty: 'Easy'
+created_at: '2024-07-28'
+updated_at: '2024-07-28'
+is_playground: true
+is_comment: true
+---
+
+> Problem
+https://leetcode.com/problems/number-of-lines-to-write-string/
+
+> Solution
+
+``` typescript
+function numberOfLines(widths: number[], s: string): number[] {
+    let result = 1;
+    let lastLineWidth = 0;
+    for (let i = 0; i < s.length; i++) {
+        let width = widths[s.charCodeAt(i) - 97];
+        if (width + lastLineWidth > 100) {
+            result++;
+            lastLineWidth = width;
+        } else {
+            lastLineWidth += width;
+        }
+    }
+    return [result, lastLineWidth];
+};
+```
