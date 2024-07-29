@@ -1,0 +1,31 @@
+---
+id: 2032
+title: 'Two Out of Three'
+category: 'Algorithm'
+language: 'TypeScript'
+difficulty: 'Easy'
+created_at: '2024-07-28'
+updated_at: '2024-07-28'
+is_playground: true
+is_comment: true
+---
+
+> Problem
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+
+> Solution
+
+``` typescript
+function twoOutOfThree(nums1: number[], nums2: number[], nums3: number[]): number[] {
+    const array1 = intersection(nums1, nums2);
+    const array2 = intersection(nums2, nums3);
+    const array3 = intersection(nums3, nums1);
+    return Array.from(new Set(array1.concat(array2,array3)))
+};
+
+function intersection(nums1: number[], nums2: number[]): number[] {
+    const set = new Set(nums1);
+    const filtered = Array.from(set);
+    return filtered.filter((num) => nums2.includes(num));
+};
+```

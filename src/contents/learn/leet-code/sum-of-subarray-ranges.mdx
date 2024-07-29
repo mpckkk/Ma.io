@@ -1,0 +1,31 @@
+---
+id: 2104
+title: 'Sum of Subarray Ranges'
+category: 'Algorithm'
+language: 'TypeScript'
+difficulty: 'Easy'
+created_at: '2024-07-28'
+updated_at: '2024-07-28'
+is_playground: true
+is_comment: true
+---
+
+> Problem
+https://leetcode.com/problems/sum-of-subarray-ranges/
+
+> Solution
+
+``` typescript
+function subArrayRanges(nums: number[]): number {
+    let sum = 0;
+    for (let i = 0, length = nums.length; i < length - 1; i++) {
+        let max = nums[i], min = nums[i];
+        for (let j = i + 1; j < length; j++) {
+            if (nums[j] > max) max = nums[j]
+            if (nums[j] < min) min = nums[j]
+            sum += max - min;
+        }
+    }
+    return sum;
+};
+```
