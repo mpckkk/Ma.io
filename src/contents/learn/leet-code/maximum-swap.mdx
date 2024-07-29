@@ -1,0 +1,60 @@
+---
+id: 670
+title: 'Maximum Swap'
+category: 'Algorithm'
+language: 'TypeScript'
+difficulty: 'Easy'
+created_at: '2024-07-28'
+updated_at: '2024-07-28'
+is_playground: true
+is_comment: true
+---
+
+> Problem
+https://leetcode.com/problems/maximum-swap/
+
+> Solution
+
+``` typescript
+function maximumSwap(num: number): number {
+    const array = getArray(num);
+    const sorted = [...array].sort((a, b) => b - a);
+    for (let i = 0; i < array.length; i++) {
+          if (array[i] !== sorted[i]) {
+              const index = findLast(array,(n => n === sorted[i]));
+              const temp = array[i];
+              array[i] = array[index];
+              array[index] = temp;
+              break
+          }
+      }
+    return array.reduce((prev, next) => {
+        return prev = prev * 10 + next;
+    }, 0);
+};
+
+const getArray = (num: number): number[] => {
+    const array = [];
+    while (num > 0) {
+        array.unshift(num % 10);
+        num = Math.floor(num / 10);
+    }
+    return array;
+}
+
+const findLast = function (array, cb) {
+    if (!Array.isArray(array)) {
+        return undefined
+    }
+    if (array.length === 0) {
+        return undefined
+    }
+    for (var i = array.length - 1; i >= 0; i--) {
+        const item = array[i];
+        if (cb.call(null, item, i, array)) {
+            return i
+        }
+    }
+    return undefined
+}
+```

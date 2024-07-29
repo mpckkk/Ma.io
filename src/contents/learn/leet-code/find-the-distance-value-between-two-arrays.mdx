@@ -1,0 +1,22 @@
+---
+id: 1385
+title: 'Find the Distance Value Between Two Arrays'
+category: 'Algorithm'
+language: 'TypeScript'
+difficulty: 'Easy'
+created_at: '2024-07-28'
+updated_at: '2024-07-28'
+is_playground: true
+is_comment: true
+---
+
+> Problem
+https://leetcode.com/problems/find-the-distance-value-between-two-arrays/
+
+> Solution
+
+``` typescript
+function findTheDistanceValue(arr1: number[], arr2: number[], d: number): number {
+    return arr1.filter((num1) => arr2.every((num2) => Math.abs(num1 - num2) > d)).length;
+};
+```
