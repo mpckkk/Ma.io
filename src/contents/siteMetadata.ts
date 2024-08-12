@@ -23,8 +23,7 @@ export const siteMetadata = {
   analytics: {
     // plausibleDataDomain: '',
     // simpleAnalytics: false, // true | false
-    analyticsURL:
-      'https://us.umami.is/websites/3da496e8-01be-45d2-96cd-8cbd692dd2ff',
+    analyticsURL: 'https://cloud.umami.is/share/yq5D6feouPx6l8Gw/brian.style',
     umamiScriptSrc: 'https://cloud.umami.is/script.js',
     umamiSiteId: '3da496e8-01be-45d2-96cd-8cbd692dd2ff',
     // googleAnalyticsId: '', // e.g. UA-000000-2 or G-XXXXXXX
