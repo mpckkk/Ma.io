@@ -67,7 +67,7 @@ export const socialAccounts = {
   twitter: '',
   facebook: '',
   youtube: '',
-  linkedin: 'https://www.linkedin.com/in/brian-shen-0b0716245/',
+  linkedin: 'https://www.linkedin.com/in/haoxiang-shen-0b0716245/',
 };
 
 export const author = {
