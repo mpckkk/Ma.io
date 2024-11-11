@@ -1,18 +1,18 @@
 export const siteMetadata = {
-  siteUrl: 'https://brian.style',
+  siteUrl: 'https://Ma.io',
   siteRepo: 'https://github.com/mpckkk/Ma.io',
   siteLogo: '/images/logo.png',
-  siteShortTitle: 'Ma',
-  siteTitle: "Ma's coding journey",
+  siteShortTitle: 'Pengchong Ma',
+  siteTitle: 'Coding Journey',
   siteScreenshot: '',
   siteDescription:
-    'Self-motivated and creative developer. With more than 10 years of work experience in the tech industry, I strive to create responsive and user-friendly websites and web applications. Front-end addicted, Fullstack capable, with a strong emphasis on Typescript.',
+    'Self-motivated and dedicated developer with a passion for bioinformatics and data science. Leveraging over 10 years of experience in tech, I create intuitive and high-performance web applications with a focus on scientific research and data visualization. Skilled in full-stack development, with a specialization in modern web technologies and Typescript.',
   author: 'Pengchong Ma',
   fullName: 'Pengchong Ma',
   location: 'Lincoln, NE, USA',
   timeZone: 'America/Chicago',
   locationIcon: '🇺🇸',
-  position: 'Reseaerch Assistant',
+  position: 'Full Stack Web Developer',
   company: '',
   companySite: '',
   locale: 'en-US',
@@ -20,34 +20,23 @@ export const siteMetadata = {
   socialBanner: '/images/logo.png',
   profileCover: 'https://static.webjam.cn/images/bg/wew.png',
   analytics: {
-    // plausibleDataDomain: '',
-    // simpleAnalytics: false, // true | false
     analyticsURL: 'https://cloud.umami.is/share/yq5D6feouPx6l8Gw/brian.style',
     umamiScriptSrc: 'https://cloud.umami.is/script.js',
     umamiSiteId: '3da496e8-01be-45d2-96cd-8cbd692dd2ff',
-    // googleAnalyticsId: '', // e.g. UA-000000-2 or G-XXXXXXX
   },
 
   postPageSize: 9,
 };
 
-/**
- * Select a provider and use the environment variables associated to it
- * https://vercel.com/docs/environment-variables
- * --
- *
- * Visit each provider's documentation link and follow the instructions, then add the environment variable to your project.
- */
 export const commentConfig = {
   enable: true,
   provider: 'giscus',
-  // https://giscus.app/
   giscusConfig: {
-    gitUsername: 'BrianShenCC',
-    repo: 'brian.style', // process.env.GISCUS_REPO
-    repositoryId: 'R_kgDOLMlj6g', // process.env.GISCUS_REPOSITORY_ID
-    category: 'Announcements', // process.env.GISCUS_CATEGORY
-    categoryId: 'DIC_kwDOLMlj6s4CdnEb', // process.env.GISCUS_CATEGORY_ID
+    gitUsername: 'mpckkk',
+    repo: 'Ma.io',
+    repositoryId: 'R_kgDOLMlj6g',
+    category: 'Announcements',
+    categoryId: 'DIC_kwDOLMlj6s4CdnEb',
     mapping: 'title',
     reactions: true,
     metadata: '0',
@@ -61,28 +50,28 @@ export const commentConfig = {
 export const socialAccounts = {
   x: '',
   instagram: '',
-  email: 'shenhaoxiang1990@gmail.com',
-  github: 'https://github.com/BrianShenCC',
+  email: 'pma5@unl.edu',
+  github: 'https://github.com/mpckkk',
   twitter: '',
   facebook: '',
   youtube: '',
-  linkedin: 'https://www.linkedin.com/in/haoxiang-shen-0b0716245/',
+  linkedin: 'https://www.linkedin.com/in/pengchong-m-18bb39135/',
 };
 
 export const author = {
-  name: 'Brian Shen',
-  location: 'Toronto',
-  timeZone: 'America/Toronto',
-  locationIcon: '🇨🇦',
-  position: 'Full Stack Web Developer',
+  name: 'Pengchong Ma',
+  location: 'Lincoln, NE, USA',
+  timeZone: 'America/Chicago',
+  locationIcon: '🇺🇸',
+  position: 'Research Assistant',
   calMeetingUrl: '',
-  status: 'Restart in Canada',
-  workingOn: `I am learning and practicing the latest AI technology.`,
-  workTogether: `I'm open for new opportunities, feel free to email me to see how can we collaborate.`,
+  status: 'Hybrite',
+  workingOn: `I am exploring the intersection of bioinformatics and AI, focusing on cutting-edge data analysis and visualization techniques.`,
+  workTogether: `I’m open to new collaborations, especially in bioinformatics and data science. Feel free to email me to discuss potential opportunities.`,
   wakatime: 'https://wakatime.com/@BrianShen',
   github_accounts: [
     {
-      username: 'BrianShenCC',
+      username: 'mpckkk',
       token: process.env.GITHUB_READ_USER_TOKEN_PERSONAL,
       endpoint: '/api/github?type=personal',
       type: 'personal',
@@ -92,7 +81,6 @@ export const author = {
 };
 
 export const featureSwich = {
-  // chatGPT
   ai: false,
   contactForm: true,
   meeting: false,
@@ -104,7 +92,7 @@ export const featureSwich = {
 };
 
 export const docSearch = {
-  apiKey: 'd291a440fb755a9b202844a68064d4e9', // search only key
+  apiKey: 'd291a440fb755a9b202844a68064d4e9',
   indexName: 'BrianStyle',
   appId: 'A4M5OCLKX8',
 };
