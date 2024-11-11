@@ -1,5 +1,7 @@
 ## Installation
 
+This website was meticulously crafted from the ground up using Next.js, along with various complementary technologies. 
+
 ```
 git clone https://github.com/mpckkk/Ma.io
 ```
@@ -24,18 +26,6 @@ Change `src/contents/` to your own.
 
 ![3-devices-black](https://github.com/aulianza/aulianza.id/assets/15605885/068cae0e-7867-4767-b558-80ee049c9f1b)
 
-## Introduction
-
-This website was meticulously crafted from the ground up using Next.js, along with various complementary technologies. Its inception dates back to June 2023.
-
-Ongoing enhancements, encompassing both functionality and content, are in the pipeline. This website stands as a treasured repository of my acquired knowledge, also serving as a platform for me to disseminate insights.
-
-Feel welcome to utilize this website as a point of reference, a wellspring of inspiration, or as a template, all in accordance with the provided license. The source code is at your disposal to suit your specific requirements.
-
-Should you find value in this resource, your consideration of leaving a rating is greatly appreciated. 😎👍🏻
-
-If you have any questions, suggestions, input or anything else, don't hesitate to contact me🧑‍💻
-<br /><br />
 
 ## Features
 
