@@ -1,6 +1,6 @@
 export const siteMetadata = {
   siteUrl: 'https://brian.style',
-  siteRepo: 'https://github.com/BrianShenCC/brian.style',
+  siteRepo: 'https://github.com/mpckkk/Ma.io',
   siteLogo: '/images/logo.png',
   siteShortTitle: 'Brian',
   siteTitle: "Brian's coding journey",
