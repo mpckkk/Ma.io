@@ -2,8 +2,8 @@ export const siteMetadata = {
   siteUrl: 'https://brian.style',
   siteRepo: 'https://github.com/mpckkk/Ma.io',
   siteLogo: '/images/logo.png',
-  siteShortTitle: 'Brian',
-  siteTitle: "Brian's coding journey",
+  siteShortTitle: 'Ma',
+  siteTitle: "Ma's coding journey",
   siteScreenshot: '',
   siteDescription:
     'Self-motivated and creative developer. With more than 10 years of work experience in the tech industry, I strive to create responsive and user-friendly websites and web applications. Front-end addicted, Fullstack capable, with a strong emphasis on Typescript.',
