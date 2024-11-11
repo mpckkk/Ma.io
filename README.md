@@ -1,29 +1,18 @@
 ## Installation
 
-```sh
-cd webjam.cn && pnpm install
-
-# 或者
-cd webjam.cn && yarn
+```
+git clone https://github.com/mpckkk/Ma.io
 ```
 
-启动开发服务
+```
+cd Ma.io && yarn
+```
 
-```sh
-pnpm run dev
-# 或者
+```
 yarn dev
 ```
 
-然后修改 `src/contents/` 里面的内容即可。
-
-## 如果你有一些想法或者建议
-
-如果你有什么想法或者建议，可以通过 [Issues](https://github.com/wencaizhang/webjam.cn/issues/new) 告诉我或者直接给我[发邮件](mailto:1052642137@qq.com)。
-
-当然如果你有能力对代码进行优化也欢迎直接 PR。
-
-_以下是原 readme_
+Change `src/contents/` to your own.
 
 ---
 
