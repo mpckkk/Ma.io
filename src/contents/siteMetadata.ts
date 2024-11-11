@@ -19,11 +19,6 @@ export const siteMetadata = {
   image: '/images/logo.png',
   socialBanner: '/images/logo.png',
   profileCover: 'https://static.webjam.cn/images/bg/wew.png',
-  analytics: {
-    analyticsURL: 'https://cloud.umami.is/share/yq5D6feouPx6l8Gw/brian.style',
-    umamiScriptSrc: 'https://cloud.umami.is/script.js',
-    umamiSiteId: '3da496e8-01be-45d2-96cd-8cbd692dd2ff',
-  },
 
   postPageSize: 9,
 };
@@ -67,7 +62,7 @@ export const author = {
   calMeetingUrl: '',
   status: 'Hybrite',
   workingOn: `I am exploring the intersection of bioinformatics and AI, focusing on cutting-edge data analysis and visualization techniques.`,
-  workTogether: `I’m open to new collaborations, especially in bioinformatics and data science. Feel free to email me to discuss potential opportunities.`,
+  workTogether: `I’m open to new collaborations, especially in bioinformatics single cell and data science. Feel free to Email me to discuss potential opportunities.`,
   wakatime: 'https://wakatime.com/@BrianShen',
   github_accounts: [
     {
