@@ -22,7 +22,9 @@ export const siteMetadata = {
 
   postPageSize: 9,
   analytics: {
-  analyticsURL: '', // Add your analytics URL here
+    analyticsURL: '', // Add your analytics URL here
+    umamiScriptSrc: '', // Replace with actual Umami script URL
+    umamiSiteId: '', // Replace with actual Umami site ID
   },
 };
 
