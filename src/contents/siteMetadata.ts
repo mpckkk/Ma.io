@@ -22,7 +22,7 @@ export const siteMetadata = {
 
   postPageSize: 9,
   analytics: {
-  analyticsURL: 'https://your-analytics-url.com', // Add your analytics URL here
+  analyticsURL: '', // Add your analytics URL here
   },
 };
 
