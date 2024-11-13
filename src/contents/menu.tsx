@@ -184,4 +184,5 @@ export const EXTERNAL_LINKS: MenuItemProps[] = [
     eventName: 'External Link: Analytics',
     type: 'Link',
   },
+const analyticsURL = siteMetadata.analytics?.analyticsURL || '#'; // Fallback to "#" if undefined  
 ];
