@@ -21,7 +21,11 @@ export const siteMetadata = {
   profileCover: 'https://static.webjam.cn/images/bg/wew.png',
 
   postPageSize: 9,
+  analytics: {
+  analyticsURL: 'https://your-analytics-url.com', // Add your analytics URL here
+  },
 };
+
 
 export const commentConfig = {
   enable: true,
