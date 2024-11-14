@@ -87,7 +87,7 @@ export const featureSwich = {
   meeting: false,
   guestbook: false,
   spotify: false,
-  dashboard_wakatime: false,
+  dashboard_wakatime: true,
   dashboard_github: true,
   topBanner: false,
 };
