@@ -18,10 +18,9 @@ interface CodingActiveProps {
 }
 
 const CodingActive = ({ lastUpdate }: CodingActiveProps) => {
-  const { data } = useSWR('/api/read-stats', fetcher);
-  const [formattedLastUpdate, setFormattedLastUpdate] = useState<string | null>(
-    null
-  );
+  // Adding error handling and fallback to useSWR hook
+  const { data, error } = useSWR('/api/read-stats', fetcher);
+  const [formattedLastUpdate, setFormattedLastUpdate] = useState<string | null>(null);
 
   useEffect(() => {
     const formatLastUpdate = (): void => {
@@ -48,6 +47,21 @@ const CodingActive = ({ lastUpdate }: CodingActiveProps) => {
     return null;
   };
 
+  // Render fallback UI if there's an error
+  if (error) {
+    return (
+      <section className='flex flex-col gap-y-2'>
+        <SectionHeading
+          title='Weekly Statistics'
+          icon={<WakatimeIcon className='mr-1' />}
+        />
+        <p className="text-sm text-red-500">
+          Error fetching WakaTime data. Please try again later.
+        </p>
+      </section>
+    );
+  }
+
   return (
     <section className='flex flex-col gap-y-2'>
       <SectionHeading
@@ -71,8 +85,14 @@ const CodingActive = ({ lastUpdate }: CodingActiveProps) => {
         </div>
       </SectionSubHeading>
 
-      <Overview data={data} />
-      <CodingActiveList data={data} />
+      {data ? (
+        <>
+          <Overview data={data} />
+          <CodingActiveList data={data} />
+        </>
+      ) : (
+        <p className="text-sm text-neutral-500">Loading data...</p>
+      )}
     </section>
   );
 };
