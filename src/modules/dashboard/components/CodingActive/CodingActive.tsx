@@ -7,7 +7,6 @@ import useSWR from 'swr';
 
 import SectionHeading from '@/common/components/elements/SectionHeading';
 import SectionSubHeading from '@/common/components/elements/SectionSubHeading';
-import { author } from '@/contents/siteMetadata';
 import { fetcher } from '@/services/fetcher';
 
 import CodingActiveList from './CodingActiveList';
@@ -18,17 +17,18 @@ interface CodingActiveProps {
 }
 
 const CodingActive = ({ lastUpdate }: CodingActiveProps) => {
-  // Adding error handling and fallback to useSWR hook
-  const { data, error } = useSWR('/api/read-stats', fetcher);
-  const [formattedLastUpdate, setFormattedLastUpdate] = useState<string | null>(null);
+  const { data } = useSWR('/api/read-stats', fetcher);
+  const [formattedLastUpdate, setFormattedLastUpdate] = useState<string | null>(
+    null,
+  );
 
   useEffect(() => {
     const formatLastUpdate = (): void => {
       const lastUpdateDate = lastUpdate || data?.last_update;
       if (lastUpdateDate) {
         const zonedDate = utcToZonedTime(
-          zonedTimeToUtc(lastUpdateDate, author.timeZone),
-          author.timeZone
+          zonedTimeToUtc(lastUpdateDate, 'Asia/Jakarta'),
+          'Asia/Jakarta',
         );
         const distance = formatDistanceToNowStrict(zonedDate, {
           addSuffix: true,
@@ -47,21 +47,6 @@ const CodingActive = ({ lastUpdate }: CodingActiveProps) => {
     return null;
   };
 
-  // Render fallback UI if there's an error
-  if (error) {
-    return (
-      <section className='flex flex-col gap-y-2'>
-        <SectionHeading
-          title='Weekly Statistics'
-          icon={<WakatimeIcon className='mr-1' />}
-        />
-        <p className="text-sm text-red-500">
-          Error fetching WakaTime data. Please try again later.
-        </p>
-      </section>
-    );
-  }
-
   return (
     <section className='flex flex-col gap-y-2'>
       <SectionHeading
@@ -72,8 +57,7 @@ const CodingActive = ({ lastUpdate }: CodingActiveProps) => {
         <div className='dark:text-neutral-400 md:flex-row md:items-center'>
           <span>My </span>
           <Link
-            href={author.wakatime}
-            target='_blank'
+            href='https://wakatime.com/@aulianza'
             className='hover:text-neutral-900 hover:underline dark:hover:text-neutral-100'
           >
             WakaTime
@@ -85,14 +69,8 @@ const CodingActive = ({ lastUpdate }: CodingActiveProps) => {
         </div>
       </SectionSubHeading>
 
-      {data ? (
-        <>
-          <Overview data={data} />
-          <CodingActiveList data={data} />
-        </>
-      ) : (
-        <p className="text-sm text-neutral-500">Loading data...</p>
-      )}
+      <Overview data={data} />
+      <CodingActiveList data={data} />
     </section>
   );
 };
