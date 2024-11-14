@@ -17,14 +17,10 @@ interface CodingActiveProps {
 }
 
 const CodingActive = ({ lastUpdate }: CodingActiveProps) => {
-  const { data } = useSWR('/api/read-stats', fetcher, { suspense: false });
-  const [formattedLastUpdate, setFormattedLastUpdate] = useState<string | null>(null);
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    // Check if component is mounted on the client side
-    setIsClient(true);
-  }, []);
+  const { data } = useSWR('/api/read-stats', fetcher);
+  const [formattedLastUpdate, setFormattedLastUpdate] = useState<string | null>(
+    null,
+  );
 
   useEffect(() => {
     const formatLastUpdate = (): void => {
@@ -32,7 +28,7 @@ const CodingActive = ({ lastUpdate }: CodingActiveProps) => {
       if (lastUpdateDate) {
         const zonedDate = utcToZonedTime(
           zonedTimeToUtc(lastUpdateDate, 'Asia/Jakarta'),
-          'Asia/Jakarta'
+          'Asia/Jakarta',
         );
         const distance = formatDistanceToNowStrict(zonedDate, {
           addSuffix: true,
@@ -41,10 +37,8 @@ const CodingActive = ({ lastUpdate }: CodingActiveProps) => {
       }
     };
 
-    if (isClient) {
-      formatLastUpdate();
-    }
-  }, [lastUpdate, data, isClient]);
+    formatLastUpdate();
+  }, [lastUpdate, data]);
 
   const renderLastUpdate = () => {
     if (formattedLastUpdate) {
@@ -52,11 +46,6 @@ const CodingActive = ({ lastUpdate }: CodingActiveProps) => {
     }
     return null;
   };
-
-  if (!isClient) {
-    // Render a placeholder or nothing during server-side rendering
-    return null;
-  }
 
   return (
     <section className='flex flex-col gap-y-2'>
