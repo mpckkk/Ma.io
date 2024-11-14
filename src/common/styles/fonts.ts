@@ -19,25 +19,11 @@
 //   display: 'fallback',
 //   weight: ['300', '400', '500', '600', '700', '800'],
 // });
-/* global.css */
-@font-face {
-  font-family: 'Plus Jakarta Sans';
-  src: url('/fonts/plus-jakarta-sans/PlusJakartaSans-Regular.woff2') format('woff2'),
-       url('/fonts/plus-jakarta-sans/PlusJakartaSans-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Fira Code';
-  src: url('/fonts/fira-code/FiraCode-Regular.woff2') format('woff2'),
-       url('/fonts/fira-code/FiraCode-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Sora';
-  src: url('/fonts/sora/Sora-Regular.woff2') format('woff2'),
-       url('/fonts/sora/Sora-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
+import { Plus_Jakarta_Sans } from 'next/font/google';
+
+export const jakartaSans = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['400', '500', '600', '700', '800'],
+  fallback: ['Arial', 'sans-serif'], // Use local fallbacks
+});
