@@ -1,21 +1,3 @@
-## Installation
-
-This website was meticulously crafted from the ground up using Next.js, along with various complementary technologies. 
-
-```
-git clone https://github.com/mpckkk/Ma.io
-```
-
-```
-cd Ma.io && yarn
-```
-
-```
-yarn dev
-```
-
-Change `src/contents/` to your own.
-
 ---
 
 <div align="center">
