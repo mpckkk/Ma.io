@@ -1,3 +1,4 @@
+
 import AOS from 'aos';
 import type { AppProps } from 'next/app';
 import dynamic from 'next/dynamic';
@@ -9,19 +10,22 @@ import { useEffect } from 'react';
 import 'tailwindcss/tailwind.css';
 import 'aos/dist/aos.css';
 import '@/common/styles/globals.css';
-import '@/common/styles/link-icon.css';
-import '@/contents/custom.css';
 
 import CommandPalette from '@/common/components/elements/CommandPalette';
 import Layout from '@/common/components/layouts';
 import { CommandPaletteProvider } from '@/common/context/CommandPaletteContext';
-import { firaCode, jakartaSans, soraSans } from '@/common/styles/fonts';
+import {
+  firaCode,
+  jakartaSans,
+  onestSans,
+  soraSans,
+} from '@/common/styles/fonts';
 
 import defaultSEOConfig from '../../next-seo.config';
 
 const ProgressBar = dynamic(
   () => import('src/common/components/elements/ProgressBar'),
-  { ssr: false }
+  { ssr: false },
 );
 
 const App = ({ Component, pageProps: { session, ...pageProps } }: AppProps) => {
@@ -40,6 +44,7 @@ const App = ({ Component, pageProps: { session, ...pageProps } }: AppProps) => {
             --jakartaSans-font: ${jakartaSans.style.fontFamily};
             --soraSans-font: ${soraSans.style.fontFamily};
             --firaCode-font: ${firaCode.style.fontFamily};
+            --onestSans-font: ${onestSans.style.fontFamily};
           }
         `}
       </style>
