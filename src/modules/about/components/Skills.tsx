@@ -40,7 +40,7 @@ const Skills = () => {
     <div className='space-y-8'>
       <div className='space-y-2'>
         <SectionHeading
-          title='Skills'
+          title='Tool I have been used'
           icon={<SkillsIcon size={22} className='mr-1' />}
         />
         <SectionSubHeading>
