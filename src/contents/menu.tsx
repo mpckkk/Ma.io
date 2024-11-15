@@ -107,8 +107,19 @@ export const MENU_ITEMS: MenuItemProps[] = [
     eventName: 'Pages: Contact',
     type: 'Pages',
   },
+  // {
+  //   title: 'Playground',
+  //   href: '/playground',
+  //   icon: <SiJavascript size={iconSize} />,
+  //   isShow: true,
+  //   isExternal: false,
+  //   eventName: 'Pages: Playground',
+  //   type: 'Pages',
+  // },
+];
+export const MENU_APPS: MenuItemProps[] = [
   {
-    title: 'Playground',
+    title: 'JS Playground',
     href: '/playground',
     icon: <SiJavascript size={iconSize} />,
     isShow: true,
