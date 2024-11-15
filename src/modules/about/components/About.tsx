@@ -7,6 +7,11 @@ import {
 
 import { Tabs } from '@/common/components/elements/Tabs';
 
+import CareerList from './CareerList';
+import EducationList from './EducationList';
+import Resume from './Resume';
+import Story from './Story';
+
 const About = () => {
   const TABS = [
     {
