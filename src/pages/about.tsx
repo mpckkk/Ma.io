@@ -9,13 +9,19 @@ const PAGE_TITLE = 'About';
 const PAGE_DESCRIPTION =
   'An insightful glimpse into who I am – because every detail adds depth to the canvas of life.';
 
+// Define the about data object
+const aboutData = {
+  name: 'Ryan Aulia',
+  bio: 'An insightful glimpse into who I am – because every detail adds depth to the canvas of life.',
+};
+
 const AboutPage: NextPage = () => {
   return (
     <>
       <NextSeo title={`${PAGE_TITLE} - Ryan Aulia`} />
       <Container data-aos='fade-up'>
         <PageHeading title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
-        <About />
+        <About about={aboutData} /> {/* Pass the required prop */}
       </Container>
     </>
   );
