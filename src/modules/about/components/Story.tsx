@@ -1,27 +1,25 @@
-// import { ABOUT } from '@/common/constant/about';
-import MDXComponent from '@/common/components/elements/MDXComponent';
+import Image from '@/common/components/elements/Image';
+import { ABOUT } from '@/common/constant/about';
 
-interface ContentBodyProps {
-  content: string;
-}
-
-const ContentBody = ({ content }: ContentBodyProps) => {
+const Story = () => {
   return (
-    <div className='space-y-5 leading-[1.8] dark:text-neutral-300 mt-5'>
-      <MDXComponent>{content}</MDXComponent>
+    <div className='space-y-8'>
+      <section
+        className='space-y-4 leading-[1.8] text-neutral-800 dark:text-neutral-300 md:leading-loose'
+        dangerouslySetInnerHTML={{ __html: ABOUT }}
+      />
+
+      <div className='space-y-4'>
+        <span>Best Regards,</span>
+        <Image
+          src='/images/signature.png'
+          width={150}
+          height={150}
+          alt='Aulianza'
+        />
+      </div>
     </div>
   );
 };
 
-export default ContentBody;
-
-// const Story = () => {
-//   return (
-//     <section
-//       className='space-y-4 leading-[1.8] md:leading-loose text-neutral-800 dark:text-neutral-300'
-//       dangerouslySetInnerHTML={{ __html: ABOUT }}
-//     />
-//   );
-// };
-
-// export default Story;
+export default Story;
