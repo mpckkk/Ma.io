@@ -39,8 +39,7 @@ const Skills = () => {
   return (
     <div className='space-y-8'>
       <div className='space-y-2'>
-        <SectionHeading
-          title='Tools that I have used'
+        <SectionHeading title='Tools that I have used' />
       </div>
 
       <div className='flex w-full'>
