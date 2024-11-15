@@ -1,47 +1,57 @@
-import Breakline from '@/common/components/elements/Breakline';
-import { CareerProps } from '@/common/types/careers';
-import { EducationProps } from '@/common/types/education';
+import {
+  HiOutlineAcademicCap as EducationIcon,
+  HiOutlineBookmark as AboutIcon,
+  HiOutlineBriefcase as CareerIcon,
+  HiOutlineDocumentText as ResumeIcon,
+} from 'react-icons/hi';
+
+import { Tabs } from '@/common/components/elements/Tabs';
 
 import CareerList from './CareerList';
 import EducationList from './EducationList';
 import Resume from './Resume';
-import Skills from './Skills';
 import Story from './Story';
 
-interface AboutProps {
-  content: string;
-  frontMatter: {
-    resume: string;
-    education: EducationProps[];
-    career: CareerProps[];
-  };
-}
-
-const About = ({ about }: { about: AboutProps }) => {
-  return (
-    <>
-      <Story content={about.content} />
-      {about.frontMatter.resume && (
-        <>
-          <Resume resumeUrl={about.frontMatter.resume} />
-        </>
-      )}
-      <Breakline className='my-8' />
-      <Skills />
-      {about.frontMatter.career && (
-        <>
-          <Breakline className='my-8' />
-          <CareerList careerList={about.frontMatter.career} />
-        </>
-      )}
-      {about.frontMatter.education && (
-        <>
-          <Breakline className='my-8' />
-          <EducationList educationList={about?.frontMatter.education} />
-        </>
-      )}
-    </>
-  );
+const About = () => {
+  const TABS = [
+    {
+      label: (
+        <TabLabel>
+          <AboutIcon size={17} /> Intro
+        </TabLabel>
+      ),
+      children: <Story />,
+    },
+    {
+      label: (
+        <TabLabel>
+          <ResumeIcon size={17} /> Resume
+        </TabLabel>
+      ),
+      children: <Resume />,
+    },
+    {
+      label: (
+        <TabLabel>
+          <CareerIcon size={17} /> Career
+        </TabLabel>
+      ),
+      children: <CareerList />,
+    },
+    {
+      label: (
+        <TabLabel>
+          <EducationIcon size={17} /> Education
+        </TabLabel>
+      ),
+      children: <EducationList />,
+    },
+  ];
+  return <Tabs tabs={TABS} />;
 };
 
 export default About;
+
+const TabLabel = ({ children }: { children: React.ReactNode }) => (
+  <div className='flex items-center justify-center gap-1.5'>{children}</div>
+);
