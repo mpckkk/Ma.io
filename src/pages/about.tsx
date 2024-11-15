@@ -1,46 +1,24 @@
-import { GetStaticProps, NextPage } from 'next';
+import { NextPage } from 'next';
 import { NextSeo } from 'next-seo';
 
 import Container from '@/common/components/elements/Container';
 import PageHeading from '@/common/components/elements/PageHeading';
-import { getEntry } from '@/common/libs/mdx';
-import { CareerProps } from '@/common/types/careers';
-import { EducationProps } from '@/common/types/education';
-import { siteMetadata } from '@/contents/siteMetadata';
 import About from '@/modules/about';
+
 const PAGE_TITLE = 'About';
 const PAGE_DESCRIPTION =
-  'A short story of me, not important but seem better than nothing.';
+  'An insightful glimpse into who I am – because every detail adds depth to the canvas of life.';
 
-interface About {
-  content: string;
-  frontMatter: {
-    resume: string;
-    education: EducationProps[];
-    career: CareerProps[];
-  };
-}
-
-const AboutPage: NextPage<{ about: About }> = ({ about }) => {
+const AboutPage: NextPage = () => {
   return (
     <>
-      <NextSeo title={`${PAGE_TITLE} - ${siteMetadata.author}`} />
+      <NextSeo title={`${PAGE_TITLE} - Ryan Aulia`} />
       <Container data-aos='fade-up'>
         <PageHeading title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
-        <About about={about} />
+        <About />
       </Container>
     </>
   );
 };
 
 export default AboutPage;
-
-export const getStaticProps: GetStaticProps = async () => {
-  const about = await getEntry('', 'about');
-
-  return {
-    props: {
-      about: about,
-    },
-  };
-};
