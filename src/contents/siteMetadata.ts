@@ -54,8 +54,8 @@ export const socialAccounts = {
   email: 'pma5@unl.edu',
   github: 'https://github.com/mpckkk',
   twitter: '',
-  facebook: '',
-  youtube: '',
+  facebook: 'https://www.facebook.com/ma.pengchong/',
+  googlescholar: 'https://scholar.google.com/citations?user=bNvdHHMAAAAJ&hl=en',
   linkedin: 'https://www.linkedin.com/in/pengchong-m-18bb39135/',
 };
 
