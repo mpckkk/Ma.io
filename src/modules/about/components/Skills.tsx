@@ -41,9 +41,7 @@ const ToolsThatIHaveUsed = () => {
         <SectionHeading
           title='Tools That I Have Used'  // Heading text without icon
         />
-        <SectionSubHeading>
-          <p className='dark:text-neutral-400'>The tools and technologies I have experience with.</p> 
-        </SectionSubHeading>
+
       </div>
 
       <div className='flex w-full'>
