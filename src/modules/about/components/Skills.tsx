@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { ReactNode, useEffect, useState } from 'react';
-import { BiCodeAlt as SkillsIcon } from 'react-icons/bi';
+import { BiCodeAlt as ToolsIcon } from 'react-icons/bi';  // Change icon name to reflect tools
 
 import InfiniteLoopSlider from '@/common/components/elements/InfiniteLoopSlider';
 import SectionHeading from '@/common/components/elements/SectionHeading';
@@ -14,7 +14,7 @@ const Tag = ({ icon, title }: { icon: ReactNode; title: string }) => (
   </div>
 );
 
-const Skills = () => {
+const ToolsThatIHaveUsed = () => {
   const [shuffledSkills, setShuffledSkills] = useState<
     Array<[string, ReactNode]>
   >([]);
@@ -40,11 +40,11 @@ const Skills = () => {
     <div className='space-y-8'>
       <div className='space-y-2'>
         <SectionHeading
-          title='Skills'
-          icon={<SkillsIcon size={22} className='mr-1' />}
+          title='Tools That I Have Used'  // Updated heading text
+          icon={<ToolsIcon size={22} className='mr-1' />}  // Updated icon
         />
         <SectionSubHeading>
-          <p className='dark:text-neutral-400'>My professional skills.</p>
+          <p className='dark:text-neutral-400'>The tools and technologies I have experience with.</p>  {/* Updated subheading */}
         </SectionSubHeading>
       </div>
 
@@ -58,7 +58,7 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default ToolsThatIHaveUsed;
 
 const StyledFade = styled.div`
   pointer-events: none;
