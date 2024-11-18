@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { ReactNode, useEffect, useState } from 'react';
-import { BiCodeAlt as ToolsIcon } from 'react-icons/bi';  // Change icon name to reflect tools
 
 import InfiniteLoopSlider from '@/common/components/elements/InfiniteLoopSlider';
 import SectionHeading from '@/common/components/elements/SectionHeading';
@@ -40,11 +39,10 @@ const ToolsThatIHaveUsed = () => {
     <div className='space-y-8'>
       <div className='space-y-2'>
         <SectionHeading
-          title='Tools That I Have Used'  // Updated heading text
-          icon={<ToolsIcon size={22} className='mr-1' />}  // Updated icon
+          title='Tools That I Have Used'  // Heading text without icon
         />
         <SectionSubHeading>
-          <p className='dark:text-neutral-400'>The tools and technologies I have experience with.</p>  {/* Updated subheading */}
+          <p className='dark:text-neutral-400'>The tools and technologies I have experience with.</p> 
         </SectionSubHeading>
       </div>
 
