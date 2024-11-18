@@ -12,7 +12,7 @@ export const siteMetadata = {
   location: 'Lincoln, NE, USA',
   timeZone: 'America/Chicago',
   locationIcon: '🇺🇸',
-  position: 'Full Stack Web Developer',
+  position: 'Research Assistant',
   company: 'UNL',
   companySite: 'https:unl.edu',
   locale: 'en-US',
@@ -50,12 +50,10 @@ export const commentConfig = {
 
 export const socialAccounts = {
   x: '',
-  instagram: '',
+  instagram: 'https://www.instagram.com/pcmmm_/',
   email: 'pma5@unl.edu',
   github: 'https://github.com/mpckkk',
   twitter: '',
-  facebook: 'ma.pengchong',
-  googlescholar: 'bNvdHHMAAAAJ&hl=en',
   linkedin: 'https://www.linkedin.com/in/pengchong-m-18bb39135/',
 };
 
