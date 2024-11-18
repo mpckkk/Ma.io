@@ -39,7 +39,13 @@ const Skills = () => {
   return (
     <div className='space-y-8'>
       <div className='space-y-2'>
-        <SectionHeading title='Tools that I have used' />
+        <SectionHeading
+          title='Skills'
+          icon={<SkillsIcon size={22} className='mr-1' />}
+        />
+        <SectionSubHeading>
+          <p className='dark:text-neutral-400'>My professional skills.</p>
+        </SectionSubHeading>
       </div>
 
       <div className='flex w-full'>
