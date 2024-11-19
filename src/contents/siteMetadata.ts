@@ -6,7 +6,7 @@ export const siteMetadata = {
   siteTitle: 'Coding Journey',
   siteScreenshot: '',
   siteDescription:
-    'Self-motivated and dedicated developer with a passion for bioinformatics and data science. Leveraging over 10 years of experience in tech, I create intuitive and high-performance web applications with a focus on scientific research and data visualization. Skilled in full-stack development, with a specialization in modern web technologies and Typescript.',
+    'Self-motivated and dedicated developer with a passion for bioinformatics and data science. Leveraging over 10 years of experience in tech, I create intuitive and high performance web applications with a focus on plant single cell. Skilled in fullstack development.',
   author: 'Pengchong Ma',
   fullName: 'Pengchong Ma',
   location: 'Lincoln, NE, USA',
@@ -20,14 +20,12 @@ export const siteMetadata = {
   socialBanner: '/images/logo.png',
   profileCover: 'https://static.webjam.cn/images/bg/wew.png',
   postPageSize: 9,
-
   analytics: {
     analyticsURL: '', // Add your analytics URL here
     umamiScriptSrc: '', // Replace with actual Umami script URL
     umamiSiteId: '', // Replace with actual Umami site ID
   },
 };
-
 
 export const commentConfig = {
   enable: true,
@@ -65,8 +63,8 @@ export const author = {
   position: 'Research Assistant',
   calMeetingUrl: '',
   status: 'Hybrite',
-  workingOn: `I am exploring the intersection of bioinformatics and AI, focusing on cutting-edge data analysis and visualization techniques.`,
-  workTogether: `I’m open to new collaborations, especially in bioinformatics single cell and data science. Feel free to Email me to discuss potential opportunities.`,
+  workingOn: `I am exploring the intersection of bioinformatics and AI, focusing on cutting edge data analysis and visualization techniques.`,
+  workTogether: `I’m open to new collaborations, especially in bioinformatics single cell. Feel free to Email me to discuss potential opportunities.`,
   wakatime: 'https://wakatime.com/',
   github_accounts: [
     {
