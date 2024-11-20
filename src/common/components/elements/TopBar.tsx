@@ -14,9 +14,9 @@ const TopBar = () => {
       className='hidden xl:flex gap-x-2 items-center justify-center p-2.5 shadow-lg backdrop-blur-2xl bg-no-repeat bg-cover text-sm dark:text-neutral-300 dark:border-b dark:border-neutral-800'
       style={{ backgroundImage: bg }}
     >
-      <span>🌟🍺✨🎉</span>
-      <span>你好，2024</span>
-      <span>🎉✨🍺🌟</span>
+      <span>🌟🌟🌟</span>
+      <span>Hi Everyopne!</span>
+      <span>🌟🌟🌟</span>
       <a
         href={siteMetadata.siteUrl}
         target='_blank'
