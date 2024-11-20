@@ -10,7 +10,7 @@ import { siteMetadata } from '@/contents/siteMetadata';
 import About from '@/modules/about';
 const PAGE_TITLE = 'About';
 const PAGE_DESCRIPTION =
-  'A story of who I am. Not important but seem better than nothing :)';
+  'A story of who I am. Not important but better than nothing :)';
 
 interface About {
   content: string;
