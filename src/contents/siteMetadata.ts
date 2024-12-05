@@ -53,7 +53,7 @@ export const socialAccounts = {
   email: 'pma5@unl.edu',
   github: 'https://github.com/mpckkk',
   linkedin: 'https://www.linkedin.com/in/pengchong-m-18bb39135/',
-  googlescholar: 'https://scholar.google.com/citations?user=bNvdHHMAAAAJ&hl=en',
+  googlescholar: 'https://scholar.google.com/citations?hl=en&user=bNvdHHMAAAAJ',
 };
 
 export const author = {
