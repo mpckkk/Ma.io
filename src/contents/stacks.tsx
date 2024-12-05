@@ -81,4 +81,9 @@ export const STACKS: stacksProps = {
   // Express: <SiExpress size={iconSize} />,
   // jQuery: <SiJquery size={iconSize} className='jquery' />,
   MQTT: <SiMqtt size={iconSize} className='text-purple-600' />,
+  Python: <SiPython size={iconSize} className="text-blue-500" />,
+  R: <SiR size={iconSize} className="text-green-600" />,
+  Java: <SiJava size={iconSize} className="text-red-500" />,
+  Bash: <SiBash size={iconSize} className="text-gray-500" />,
+  Xcode: <SiXcode size={iconSize} className="text-blue-400" />,
 };
