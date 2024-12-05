@@ -163,7 +163,7 @@ export const SOCIAL_MEDIA: MenuItemProps[] = [
     className: '!bg-orange-700 border border dark:border-neutral-700',
     type: 'Link',
   },
-{
+  {
   title: 'Google Scholar',
   href: 'socialAccounts.googlescholar', // Replace with your ID
   icon: <GoogleScholarIcon size={iconSize} />,
@@ -172,7 +172,7 @@ export const SOCIAL_MEDIA: MenuItemProps[] = [
   eventName: 'Social: Google Scholar',
   className: '!bg-blue-500 border border dark:border-neutral-700',
   type: 'Link',
-}  
+  },
   {
     title: 'Github',
     href: socialAccounts.github,
