@@ -1,4 +1,4 @@
-import { GoogleScholarIcon } from 'react-icons/si';
+import { SiGooglescholar } from 'react-icons/si';
 import { BiRocket as ContactIcon } from 'react-icons/bi';
 import {
   BsEnvelopeAtFill as EmailIcon,
