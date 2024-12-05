@@ -6,7 +6,7 @@ export const siteMetadata = {
   siteTitle: 'Coding Journey',
   siteScreenshot: '',
   siteDescription:
-    'Self-motivated and dedicated developer with a passion for bioinformatics and data science. Leveraging over 10 years of experience in tech, I create intuitive and high performance web applications with a focus on plant single cell. Skilled in fullstack development.',
+    'Self-motivated and dedicated developer with research passion in bioinformatics and data science. Leveraging over 5 years of experience in tech, I create intuitive and high performance web applications with a focus on plant single cell.',
   author: 'Pengchong Ma',
   fullName: 'Pengchong Ma',
   location: 'Lincoln, NE, USA',
@@ -89,7 +89,7 @@ export const featureSwich = {
 };
 
 export const docSearch = {
-  apiKey: 'd291a440fb755a9b202844a68064d4e9',
-  indexName: 'BrianStyle',
-  appId: 'A4M5OCLKX8',
+  apiKey: '8bd02d235a2bcceb5e28b51b58ab10ba',
+  indexName: 'Ma.io',
+  appId: 'ZWVHSF5KWK',
 };
