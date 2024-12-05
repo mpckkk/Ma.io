@@ -53,6 +53,7 @@ export const socialAccounts = {
   github: 'https://github.com/mpckkk',
   twitter: '',
   linkedin: 'https://www.linkedin.com/in/pengchong-m-18bb39135/',
+  googleScholar: 'https://scholar.google.com/citations?hl=en&user=bNvdHHMAAAAJ',
 };
 
 export const author = {
