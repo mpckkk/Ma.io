@@ -2,7 +2,6 @@ import { BsRobot } from 'react-icons/bs';
 import {
   SiPython,
   SiR,
-  SiBash,
   SiXcode,
   SiAngular,
   SiAntdesign,
@@ -82,6 +81,5 @@ export const STACKS: stacksProps = {
   MQTT: <SiMqtt size={iconSize} className='text-purple-600' />,
   Python: <SiPython size={iconSize} className="text-blue-500" />,
   R: <SiR size={iconSize} className="text-green-600" />,
-  Bash: <SiBash size={iconSize} className="text-gray-500" />,
   Xcode: <SiXcode size={iconSize} className="text-blue-400" />,
 };
