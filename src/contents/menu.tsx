@@ -166,7 +166,7 @@ export const SOCIAL_MEDIA: MenuItemProps[] = [
   },
   {
   title: 'Google Scholar',
-  href: 'socialAccounts.googlescholar', // Replace with your ID
+  href: socialAccounts.googlescholar, // Replace with your ID
   icon: <SiGooglescholar size={iconSize} />,
   isShow: true,
   isExternal: true,
