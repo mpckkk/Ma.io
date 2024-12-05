@@ -47,6 +47,8 @@ export const commentConfig = {
 };
 
 export const socialAccounts = {
+  x: '',
+  twiteer: '',  
   instagram: 'https://www.instagram.com/pcmmm_/',
   email: 'pma5@unl.edu',
   github: 'https://github.com/mpckkk',
