@@ -1,5 +1,10 @@
 import { BsRobot } from 'react-icons/bs';
 import {
+  SiPython,
+  SiR,
+  SiJava,
+  SiBash,
+  SiXcode,
   SiAngular,
   SiAntdesign,
   SiCss3,
