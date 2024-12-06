@@ -170,7 +170,7 @@ export const SOCIAL_MEDIA: MenuItemProps[] = [
     isShow: true,
     isExternal: true,
     eventName: 'Social: Linkedin',
-    className: '!bg-blue-500 border border dark:border-neutral-700',
+    className: '!bg-[#0077B5] border border dark:border-neutral-700',
     type: 'Link',
   },  
   {
