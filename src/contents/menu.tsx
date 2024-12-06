@@ -170,7 +170,7 @@ export const SOCIAL_MEDIA: MenuItemProps[] = [
     isShow: true,
     isExternal: true,
     eventName: 'Social: Linkedin',
-    className: '!bg-[#0077B5] border border dark:border-neutral-700',
+    className: '!bg-blue-500 border border dark:border-neutral-700',
     type: 'Link',
   },  
   {
@@ -180,7 +180,7 @@ export const SOCIAL_MEDIA: MenuItemProps[] = [
   isShow: true,
   isExternal: true,
   eventName: 'Social: Google Scholar',
-  className: '!bg-[#4285F4] border border dark:border-neutral-700 whitespace-nowrap text-white',
+  className: '!bg-orange border border dark:border-neutral-700 whitespace-nowrap text-white',
   type: 'Link',
   },
 ].filter((item) => {
