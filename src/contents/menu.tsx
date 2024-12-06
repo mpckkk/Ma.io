@@ -180,7 +180,7 @@ export const SOCIAL_MEDIA: MenuItemProps[] = [
   isShow: true,
   isExternal: true,
   eventName: 'Social: Google Scholar',
-  className: '!bg-dark-blue border border dark:border-neutral-700 whitespace-nowrap overflow-hidden text-ellipsis',
+  className: '!bg-[#4285F4] border border dark:border-neutral-700 whitespace-nowrap text-white',
   type: 'Link',
   },
 ].filter((item) => {
