@@ -12,27 +12,11 @@ Original Repository: [Click here](https://github.com/aulianza/aulianza.id)
 
 On this website there are several features that will continue to be updated and added in the future.
 
-### 🤖 ChatGPT AI
-
-You can access this feature by opening the command palette [cmd+k], then typing whatever you want to search/ask for.
-
-Note:
-
-If you're using Chat Completions engine model of ChatGPT, please concern about this:
-
-Due this site is using free cloud hosting services (Vercel) with certain limitations (Serverless Function Execution Timeout), sometimes an error will occur if the response from the open AI API is too long, but you can change it in the vercel.json file to upgrade memory and maxDuration to be bigger according to the capabilities of your vercel plan.
 
 ### 💻 JavaScript Playground
 
 A no-fuss pure JavaScript playground with a live feedback loop.
 
-### 💬 Realtime Guestbook
-
-Realtime guestbook chat is powered by Firebase. Anyone can leave me a message in this website.
-
-### 🎧 Spotify
-
-Displays song information being played on spotify in real time using the Spotify API and SWR.
 
 ### 🕗 Wakatime
 
@@ -43,13 +27,6 @@ Data is retrieved using the Wakatime API and then displayed on the dashboard, bu
 The content on this blog is meticulously managed and sourced from a self-hosted headless CMS powered by WordPress, exemplifying our commitment to a streamlined and efficient content delivery system.
 
 The data fetching technique used to retrieve articles from WordPress CMS API involves using Client-Side Rendering (CSR) for the blog list and Server-Side Rendering (SSR) for the blog details.
-
-### 🗳 Projects
-
-The data projects on this blog are taken from the MySQL database connected through the Prisma Client. The database for this application is hosted on PlanetScale DB.
-
-The data fetching method used to retrieve data projects is Incremental Static Regeneration (ISR) with 1 second revalidation and Server-Side Rendering (SSR) for the project details..
-<br /><br />
 
 ## Performance
 
