@@ -24,7 +24,7 @@ import { SiJavascript } from 'react-icons/si';
 import { MenuItemProps } from '@/common/types/menu';
 import { siteMetadata, socialAccounts } from '@/contents/siteMetadata';
 
-const iconSize = 20;
+const iconSize = 40;
 
 export const MENU_ITEMS: MenuItemProps[] = [
   {
