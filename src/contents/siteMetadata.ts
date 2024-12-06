@@ -49,7 +49,7 @@ export const commentConfig = {
 export const socialAccounts = {
   x: '',
   twiteer: '',  
-  instagram: '',
+  instagram: 'https://www.instagram.com/pcmmm_/',
   email: 'pma5@unl.edu',
   github: 'https://github.com/mpckkk',
   linkedin: 'https://www.linkedin.com/in/pengchong-m-18bb39135/',
