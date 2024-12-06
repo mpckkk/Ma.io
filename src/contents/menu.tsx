@@ -133,17 +133,6 @@ export const SOCIAL_MEDIA: MenuItemProps[] = [
     className: '!bg-green-600 border border dark:border-neutral-700',
     type: 'Link',
   },
-
-  {
-    title: 'Linkedin',
-    href: socialAccounts.linkedin,
-    icon: <LinkedinIcon size={iconSize} />,
-    isShow: true,
-    isExternal: true,
-    eventName: 'Social: Linkedin',
-    className: '!bg-blue-500 border border dark:border-neutral-700',
-    type: 'Link',
-  },
   {
     title: 'Twitter',
     href: socialAccounts.x,
@@ -165,16 +154,6 @@ export const SOCIAL_MEDIA: MenuItemProps[] = [
     type: 'Link',
   },
   {
-  title: 'Google Scholar',
-  href: socialAccounts.googlescholar, // Replace with your ID
-  icon: <SiGooglescholar size={iconSize} />,
-  isShow: true,
-  isExternal: true,
-  eventName: 'Social: Google Scholar',
-  className: '!bg-blue-700 border border dark:border-neutral-700',
-  type: 'Link',
-  },
-  {
     title: 'Github',
     href: socialAccounts.github,
     icon: <GithubIcon size={iconSize} />,
@@ -183,6 +162,26 @@ export const SOCIAL_MEDIA: MenuItemProps[] = [
     eventName: 'Social: Github',
     className: '!bg-black border border dark:border-neutral-700',
     type: 'Link',
+  },  
+  {
+    title: 'Linkedin',
+    href: socialAccounts.linkedin,
+    icon: <LinkedinIcon size={iconSize} />,
+    isShow: true,
+    isExternal: true,
+    eventName: 'Social: Linkedin',
+    className: '!bg-blue-500 border border dark:border-neutral-700',
+    type: 'Link',
+  },  
+  {
+  title: 'Google Scholar',
+  href: socialAccounts.googlescholar, // Replace with your ID
+  icon: <SiGooglescholar size={iconSize} />,
+  isShow: true,
+  isExternal: true,
+  eventName: 'Social: Google Scholar',
+  className: '!bg-blue-700 border border dark:border-neutral-700',
+  type: 'Link',
   },
 ].filter((item) => {
   return !!item.href;
