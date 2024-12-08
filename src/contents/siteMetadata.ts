@@ -80,7 +80,7 @@ export const author = {
 
 export const featureSwich = {
   ai: false,
-  contactForm: true,
+  contactForm: false,
   meeting: false,
   guestbook: false,
   spotify: true,
