@@ -1,4 +1,4 @@
-import { differenceInMonths, differenceInYears, format } from 'date-fns';
+import { format } from 'date-fns';
 import { BsBuildings as CompanyIcon } from 'react-icons/bs';
 
 import Card from '@/common/components/elements/Card';
@@ -16,13 +16,6 @@ const CareerCard = ({
 }: CareerProps) => {
   const startDate = new Date(start_date);
   const endDate = end_date ? new Date(end_date) : new Date();
-
-  // const durationYears = differenceInYears(endDate, startDate);
-  // const durationMonths = differenceInMonths(endDate, startDate) % 12;
-
-  // const durationText =
-  //   `${durationYears > 0 ? `${durationYears} Year${durationYears > 1 ? 's' : ''} ` : ''}` +
-  //   `${durationMonths > 0 ? `${durationMonths} Month${durationMonths > 1 ? 's' : ''}` : ''}`.trim();
 
   return (
     <Card className='flex items-center gap-5 border border-neutral-300 px-6 py-4 dark:border-neutral-900'>
@@ -52,6 +45,8 @@ const CareerCard = ({
             <div className='flex gap-1 text-neutral-500'>
               <span>{format(startDate, 'MMM yyyy')}</span> -{' '}
               <span>{end_date ? format(endDate, 'MMM yyyy') : 'Present'}</span>
+            </div>
+          </div>
         </div>
       </div>
     </Card>
