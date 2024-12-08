@@ -52,9 +52,6 @@ const CareerCard = ({
             <div className='flex gap-1 text-neutral-500'>
               <span>{format(startDate, 'MMM yyyy')}</span> -{' '}
               <span>{end_date ? format(endDate, 'MMM yyyy') : 'Present'}</span>
-            </div>
-            <span className='hidden text-neutral-300 dark:text-neutral-700 lg:block'>
-          </div>
         </div>
       </div>
     </Card>
