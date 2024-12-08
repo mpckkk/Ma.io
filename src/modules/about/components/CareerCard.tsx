@@ -17,12 +17,12 @@ const CareerCard = ({
   const startDate = new Date(start_date);
   const endDate = end_date ? new Date(end_date) : new Date();
 
-  const durationYears = differenceInYears(endDate, startDate);
-  const durationMonths = differenceInMonths(endDate, startDate) % 12;
+  // const durationYears = differenceInYears(endDate, startDate);
+  // const durationMonths = differenceInMonths(endDate, startDate) % 12;
 
-  const durationText =
-    `${durationYears > 0 ? `${durationYears} Year${durationYears > 1 ? 's' : ''} ` : ''}` +
-    `${durationMonths > 0 ? `${durationMonths} Month${durationMonths > 1 ? 's' : ''}` : ''}`.trim();
+  // const durationText =
+  //   `${durationYears > 0 ? `${durationYears} Year${durationYears > 1 ? 's' : ''} ` : ''}` +
+  //   `${durationMonths > 0 ? `${durationMonths} Month${durationMonths > 1 ? 's' : ''}` : ''}`.trim();
 
   return (
     <Card className='flex items-center gap-5 border border-neutral-300 px-6 py-4 dark:border-neutral-900'>
