@@ -65,4 +65,6 @@ const CareerCard = ({
       </div>
     </Card>
   );
+};
+  
 export default CareerCard;
