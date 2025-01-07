@@ -66,7 +66,7 @@ export const author = {
   status: 'Hybrite',
   workingOn: `I am exploring the intersection of bioinformatics and AI, focusing on cutting edge data analysis and visualization techniques.`,
   workTogether: `I’m open to new collaborations, especially in bioinformatics single cell. Feel free to Email me to discuss potential opportunities.`,
-  wakatime: 'https://wakatime.com/@4e3d0791-7069-4929-bbca-54e368c89aad',
+  wakatime: 'https://wakatime.com/',
   github_accounts: [
     {
       username: 'mpckkk',
