@@ -7,7 +7,7 @@ export const siteMetadata = {
   siteScreenshot: '',
   siteDescription:
     'Self-motivated and dedicated developer with research passion in bioinformatics and data science. Leveraging over 5 years of experience in tech, I create intuitive and high performance web applications with a focus on plant single cell.',
-  author: 'PengchongMa',
+  author: 'Pengchong Ma',
   fullName: 'Pengchong Ma',
   location: 'Lincoln, NE, USA',
   timeZone: 'America/Chicago',
@@ -57,7 +57,7 @@ export const socialAccounts = {
 };
 
 export const author = {
-  name: 'Pengchong Ma',
+  name: 'PengchongMa',
   location: 'Lincoln, NE, USA',
   timeZone: 'America/Chicago',
   locationIcon: '🇺🇸',
