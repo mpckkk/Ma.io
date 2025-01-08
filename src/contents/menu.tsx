@@ -29,7 +29,7 @@ const iconSize = 20;
 export const MENU_ITEMS: MenuItemProps[] = [
   {
     title: 'Home',
-    href: '/home',
+    href: '/',
     icon: <HomeIcon size={iconSize} />,
     isShow: true,
     isExternal: false,
