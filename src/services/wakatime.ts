@@ -42,7 +42,7 @@ export const getReadStats = async (): Promise<{
   const editors = getData?.data?.editors;
 
   return {
-    // status,
+    status,
     data: {
       last_update,
       start_date,
