@@ -45,8 +45,8 @@ export const getReadStats = async (): Promise<{
     status,
     data: {
       last_update,
-      start_date,
-      end_date,
+      // start_date,
+      // end_date,
       categories,
       best_day,
       human_readable_daily_average,
