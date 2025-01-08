@@ -55,8 +55,8 @@ export const MENU_ITEMS: MenuItemProps[] = [
     type: 'Pages',
   },
   {
-    title: 'Blog',
-    href: '/publication',
+    title: 'Publication',
+    href: '/blog',
     icon: <BlogIcon size={iconSize} />,
     isShow: true,
     isExternal: false,
