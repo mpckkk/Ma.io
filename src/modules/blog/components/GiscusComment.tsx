@@ -73,12 +73,12 @@ import { useTheme } from 'next-themes';
 
 interface GiscusComment {
   isEnableReaction?: boolean;
-  isCommentsEnabled?: boolean; // Add a flag to control comments
+  isCommentsEnabled?: boolean; 
 }
 
 const GiscusComment = ({
   isEnableReaction = false,
-  isCommentsEnabled = true, // Default to true
+  isCommentsEnabled = false, 
 }: GiscusComment) => {
   const { theme } = useTheme();
 
