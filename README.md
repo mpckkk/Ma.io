@@ -23,9 +23,3 @@ Report URL: [https://pagespeed.web.dev/analysis/https-aulianza-id/pk0y6xcz25?for
 
 ![image](https://github.com/aulianza/aulianza.id/assets/15605885/953dc131-bf52-4ef6-913c-f6eb8fb6c6a7)
 <br /><br />
-
-
-
-## License
-
-Licensed under the [GPL-3.0 license](https://github.com/aulianza/aulianza.id/blob/master/LICENSE).
