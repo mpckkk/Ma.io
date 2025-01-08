@@ -1,39 +1,40 @@
-import Giscus from '@giscus/react';
-import { useTheme } from 'next-themes';
+// import Giscus from '@giscus/react';
+// import { useTheme } from 'next-themes';
 
-import { commentConfig } from '@/contents/siteMetadata';
+// import { commentConfig } from '@/contents/siteMetadata';
 
-const config = commentConfig.giscusConfig;
+// const config = commentConfig.giscusConfig;
 
-const GiscusComment = () => {
-  const { theme } = useTheme();
+// const GiscusComment = () => {
+//   const { theme } = useTheme();
 
-  if (!commentConfig.enable) {
-    return null;
-  }
+//   if (!commentConfig.enable) {
+//     return null;
+//   }
 
-  return (
-    // <div className='mt-5 mb-2'>
-    //   <Giscus
-    //     repo={`${config.gitUsername}/${config.repo}`}
-    //     repoId={config.repositoryId}
-    //     category={config.category}
-    //     categoryId={config.categoryId}
-    //     // mapping={config.mapping}
-    //     mapping='title'
-    //     reactionsEnabled={config.reactions ? '1' : '0'}
-    //     // emitMetadata={config.metadata}
-    //     emitMetadata='0'
-    //     inputPosition='top'
-    //     theme={theme === 'dark' ? config.darkTheme : config.lightTheme}
-    //     lang={config.lang}
-    //     loading='lazy'
-    //   />
-    // </div>
-  );
-};
+//   return (
+//     <div className='mt-5 mb-2'>
+//       <Giscus
+//         repo={`${config.gitUsername}/${config.repo}`}
+//         repoId={config.repositoryId}
+//         category={config.category}
+//         categoryId={config.categoryId}
+//         // mapping={config.mapping}
+//         mapping='title'
+//         reactionsEnabled={config.reactions ? '1' : '0'}
+//         // emitMetadata={config.metadata}
+//         emitMetadata='0'
+//         inputPosition='top'
+//         theme={theme === 'dark' ? config.darkTheme : config.lightTheme}
+//         lang={config.lang}
+//         loading='lazy'
+//       />
+//     </div>
+//   );
+// };
 
-export default GiscusComment;
+// export default GiscusComment;
+
 
 // import Giscus from '@giscus/react';
 // import { useTheme } from 'next-themes';
@@ -65,3 +66,44 @@ export default GiscusComment;
 // };
 
 // export default GiscusComment;
+
+
+import Giscus from '@giscus/react';
+import { useTheme } from 'next-themes';
+
+interface GiscusComment {
+  isEnableReaction?: boolean;
+  isCommentsEnabled?: boolean; // Add a flag to control comments
+}
+
+const GiscusComment = ({
+  isEnableReaction = false,
+  isCommentsEnabled = true, // Default to true
+}: GiscusComment) => {
+  const { theme } = useTheme();
+
+  if (!isCommentsEnabled) {
+    // Return null if comments are disabled
+    return null;
+  }
+
+  return (
+    <div className='mb-2 mt-5'>
+      <Giscus
+        repo='aulianza/aulianza.id'
+        repoId='R_kgDOJoIhfQ'
+        category='General'
+        categoryId='DIC_kwDOJoIhfc4CW6cJ'
+        mapping='pathname'
+        reactionsEnabled={isEnableReaction ? '1' : '0'}
+        emitMetadata='1'
+        inputPosition='top'
+        theme={theme === 'dark' ? 'transparent_dark' : 'light'}
+        lang='en'
+        loading='lazy'
+      />
+    </div>
+  );
+};
+
+export default GiscusComment;
