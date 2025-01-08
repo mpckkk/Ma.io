@@ -29,7 +29,7 @@ const iconSize = 20;
 export const MENU_ITEMS: MenuItemProps[] = [
   {
     title: 'Home',
-    href: '/',
+    href: '/home',
     icon: <HomeIcon size={iconSize} />,
     isShow: true,
     isExternal: false,
@@ -55,12 +55,12 @@ export const MENU_ITEMS: MenuItemProps[] = [
     type: 'Pages',
   },
   {
-    title: 'Blog',
-    href: '/blog',
+    title: 'Publication',
+    href: '/publication',
     icon: <BlogIcon size={iconSize} />,
     isShow: true,
     isExternal: false,
-    eventName: 'Pages: Blog',
+    eventName: 'Pages: Publication',
     type: 'Pages',
   },
   {
