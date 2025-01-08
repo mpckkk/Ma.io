@@ -13,11 +13,6 @@ Original Repository: [Click here](https://github.com/aulianza/aulianza.id)
 On this website there are several features that will continue to be updated and added in the future.
 
 
-### 💻 JavaScript Playground
-
-A no-fuss pure JavaScript playground with a live feedback loop.
-
-
 ### 🕗 Wakatime
 
 Data is retrieved using the Wakatime API and then displayed on the dashboard, built with Next.js API routes deployed as serverless functions.
