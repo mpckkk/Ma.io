@@ -10,7 +10,7 @@ import Home from '@/modules/home';
 const HomePage: NextPage<{ blogList: BlogItemProps[] }> = ({ blogList }) => {
   return (
     <>
-      <NextSeo title={`${siteMetadata.author} - Personal Website`} />
+      <NextSeo title={`${siteMetadata.author}`} />
       <Container data-aos='fade-up'>
         <Home blogList={blogList} />
       </Container>
