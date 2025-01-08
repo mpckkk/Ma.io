@@ -11,7 +11,7 @@ export const getReadStats = async (): Promise<{
   status: number;
   data: any;
 }> => {
-  const response = await axios.get(`${STATS_ENDPOINT}/last_7_days`, {
+  const response = await axios.get(`${STATS_ENDPOINT}/last_30_days`, {
     headers: {
       Authorization: `Basic ${API_KEY}`,
     },
@@ -45,8 +45,8 @@ export const getReadStats = async (): Promise<{
     status,
     data: {
       last_update,
-      // start_date,
-      // end_date,
+      start_date,
+      end_date,
       categories,
       best_day,
       human_readable_daily_average,
