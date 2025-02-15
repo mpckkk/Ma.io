@@ -6,7 +6,7 @@ export const siteMetadata = {
   siteTitle: 'Coding Journey',
   siteScreenshot: '',
   siteDescription:
-    'Self-motivated and dedicated developer with research passion in bioinformatics and data science. Leveraging over 5 years of experience in tech, I create intuitive and high performance web applications with a focus on plant single cell.',
+    'Full Stack developer with research passion in bioinformatics (single cell omics) and machine learning, AI. Leveraging over 5 years of experience in tech, I create intuitive and high performance web applications with a focus on user interaction.',
   author: 'Pengchong Ma',
   fullName: 'Pengchong Ma',
   location: 'Lincoln, NE, USA',
