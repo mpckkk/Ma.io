@@ -26,6 +26,8 @@ pbmc = sc.datasets.pbmc68k_reduced()
 with rc_context({"figure.figsize": (4, 4)}):
     sc.pl.umap(pbmc, color="CD79A")
 
+![Enable bracket pair colorization in VSCode.](https://scanpy.readthedocs.io/en/stable/_images/57be388755512bf1c4bece588c87eeb6fc5c9961ca87791671a11abb9472dcf6.png)
+
 color_vars = [
     "CD79A",
     "MS4A1",
@@ -45,4 +47,4 @@ with rc_context({"figure.figsize": (3, 3)}):
 
 "editor.guides.bracketPairs" Both "true" and "active" can be selected, and the specific effects are compared as follows:
 
-![Enable bracket pair colorization in VSCode.](https://raw.githubusercontent.com/BrianShenCC/pictures/main/image-20240305222622885.png)
+![Enable bracket pair colorization in VSCode.](https://scanpy.readthedocs.io/en/stable/_images/57be388755512bf1c4bece588c87eeb6fc5c9961ca87791671a11abb9472dcf6.png)
