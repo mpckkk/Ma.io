@@ -1,7 +1,7 @@
 ---
-title: UMAP Visualization of Single-Cell Data
-description: Comprehensive guide to creating UMAP plots with Scanpy
-slug: umap-scanpy
+title: Scanny Core plotting
+description: Comprehensive plots guide with Python Scanpy
+slug: python-scanpy
 date: '2025-03-03'
 featured: false
 type: tutorial
@@ -23,7 +23,7 @@ with rc_context({"figure.figsize": (4, 4)}):
     sc.pl.umap(pbmc, color="CD79A")
 ```
 
-#### Visualization of gene expression and other variables ####
+#### **Visualization of gene expression and other variables** ####
 
 For the scatter plots, the value to plot is given as the color argument. This can be any gene or any column in .obs, where .obs is a DataFrame containing the annotations per observation/cell, see AnnData for more information.
 
