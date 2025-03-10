@@ -56,4 +56,30 @@ with rc_context({"figure.figsize": (3, 3)}):
 ![Enable bracket pair colorization in VSCode.](https://scanpy.readthedocs.io/en/stable/_images/f5fb8a678ef83c003c35c7b020573f9e2aab56cddf2a5a701e28f2735f83422b.png)
 In this plot we can see the groups of cells that express the marker genes and the agreement with the original cell labels.
 
+The functions for scatterplots have many options that allow fine tuning of the images. For example, we can look at the clustering as follows:
+```typescript
+# compute clusters using the leiden method and store the results with the name `clusters`
+sc.tl.leiden(
+    pbmc,
+    key_added="clusters",
+    resolution=0.5,
+    n_iterations=2,
+    flavor="igraph",
+    directed=False,
+)
+
+with rc_context({"figure.figsize": (5, 5)}):
+    sc.pl.umap(
+        pbmc,
+        color="clusters",
+        add_outline=True,
+        legend_loc="on data",
+        legend_fontsize=12,
+        legend_fontoutline=2,
+        frameon=False,
+        title="clustering of cells",
+        palette="Set1",
+    )
+```
+![Enable bracket pair colorization in VSCode.](https://scanpy.readthedocs.io/en/stable/_images/d21985bcdf27832fccc189399bdaef7bee22ef093bdd40da4061dc10b9b1baed.png)
 
