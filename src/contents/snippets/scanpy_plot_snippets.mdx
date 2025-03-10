@@ -18,9 +18,6 @@ sc.logging.print_header()
 
 # Load pbmc dataset
 pbmc = sc.datasets.pbmc68k_reduced()
-
-with rc_context({"figure.figsize": (4, 4)}):
-    sc.pl.umap(pbmc, color="CD79A")
 ```
 
 #### **Visualization of gene expression and other variables** ####
@@ -38,6 +35,10 @@ Multiple values can be given to color. In the following example we will plot 6 g
 
 Also, we will plot two other values: n_counts which is the number of UMI counts per cell (stored in .obs), and bulk_labels which is a categorical value containing the original labelling of the cells from 10X.
 
+The number of plots per row is controlled using the ncols parameter. The maximum value plotted can be adjusted using vmax (similarly vmin can be used for the minimum value). In this case we use p99, which means to use as max value the 99 percentile. The max value can be a number or a list of numbers if the vmax wants to be set for multiple plots individually.
+
+Also, we are using frameon=False to remove the boxes around the plots and s=50 to set the dot size.
+
 ```typescript
 color_vars = [
     "CD79A",
@@ -53,3 +54,6 @@ with rc_context({"figure.figsize": (3, 3)}):
     sc.pl.umap(pbmc, color=color_vars, s=50, frameon=False, ncols=4, vmax="p99")
 ```
 ![Enable bracket pair colorization in VSCode.](https://scanpy.readthedocs.io/en/stable/_images/f5fb8a678ef83c003c35c7b020573f9e2aab56cddf2a5a701e28f2735f83422b.png)
+In this plot we can see the groups of cells that express the marker genes and the agreement with the original cell labels.
+
+
