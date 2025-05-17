@@ -1,1 +1,86 @@
+---
+title: Scanpy Core plotting
+description: Comprehensive plots guide with Python Scanpy
+slug: python-scanpy
+date: '2025-03-03'
+featured: false
+type: tutorial
+draft: false
+---
+
+```typescript
+import scanpy as sc
+from matplotlib.pyplot import rc_context
+
+sc.set_figure_params(dpi=100, color_map="viridis_r")
+sc.settings.verbosity = 0
+sc.logging.print_header()
+
+# Load pbmc dataset
+pbmc = sc.datasets.pbmc68k_reduced()
+```
+
+#### **Visualization of gene expression and other variables** ####
+
+For the scatter plots, the value to plot is given as the color argument. This can be any gene or any column in .obs, where .obs is a DataFrame containing the annotations per observation/cell, see AnnData for more information.
+
+```typescript
+with rc_context({"figure.figsize": (4, 4)}):
+    sc.pl.umap(pbmc, color="CD79A")
+```
+
+![Enable bracket pair colorization in VSCode.](https://scanpy.readthedocs.io/en/stable/_images/57be388755512bf1c4bece588c87eeb6fc5c9961ca87791671a11abb9472dcf6.png)
+
+Multiple values can be given to color. In the following example we will plot 6 genes: ‘CD79A’, ‘MS4A1’, ‘IGJ’, CD3D’, ‘FCER1A’, and ‘FCGR3A’ to get an idea on where those marker genes are being expressed.
+
+Also, we will plot two other values: n_counts which is the number of UMI counts per cell (stored in .obs), and bulk_labels which is a categorical value containing the original labelling of the cells from 10X.
+
+The number of plots per row is controlled using the ncols parameter. The maximum value plotted can be adjusted using vmax (similarly vmin can be used for the minimum value). In this case we use p99, which means to use as max value the 99 percentile. The max value can be a number or a list of numbers if the vmax wants to be set for multiple plots individually.
+
+Also, we are using frameon=False to remove the boxes around the plots and s=50 to set the dot size.
+
+```typescript
+color_vars = [
+    "CD79A",
+    "MS4A1",
+    "IGJ",
+    "CD3D",
+    "FCER1A",
+    "FCGR3A",
+    "n_counts",
+    "bulk_labels",
+]
+with rc_context({"figure.figsize": (3, 3)}):
+    sc.pl.umap(pbmc, color=color_vars, s=50, frameon=False, ncols=4, vmax="p99")
+```
+![Enable bracket pair colorization in VSCode.](https://scanpy.readthedocs.io/en/stable/_images/f5fb8a678ef83c003c35c7b020573f9e2aab56cddf2a5a701e28f2735f83422b.png)
+In this plot we can see the groups of cells that express the marker genes and the agreement with the original cell labels.
+
+The functions for scatterplots have many options that allow fine tuning of the images. For example, we can look at the clustering as follows:
+```typescript
+# compute clusters using the leiden method and store the results with the name `clusters`
+sc.tl.leiden(
+    pbmc,
+    key_added="clusters",
+    resolution=0.5,
+    n_iterations=2,
+    flavor="igraph",
+    directed=False,
+)
+
+with rc_context({"figure.figsize": (5, 5)}):
+    sc.pl.umap(
+        pbmc,
+        color="clusters",
+        add_outline=True,
+        legend_loc="on data",
+        legend_fontsize=12,
+        legend_fontoutline=2,
+        frameon=False,
+        title="clustering of cells",
+        palette="Set1",
+    )
+```
+![Enable bracket pair colorization in VSCode.](https://scanpy.readthedocs.io/en/stable/_images/d21985bcdf27832fccc189399bdaef7bee22ef093bdd40da4061dc10b9b1baed.png)
+
 
