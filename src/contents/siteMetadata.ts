@@ -63,7 +63,7 @@ export const author = {
   locationIcon: '🇺🇸',
   position: 'Research Assistant',
   calMeetingUrl: '',
-  status: 'Hybrite',
+  status: '',
   workingOn: `I am exploring the intersection of bioinformatics and AI, focusing on cutting edge data analysis and visualization techniques.`,
   workTogether: `I’m open to new collaborations, especially in bioinformatics single cell. Feel free to Email me to discuss potential opportunities.`,
   wakatime: 'https://wakatime.com/@PengchongMa',
