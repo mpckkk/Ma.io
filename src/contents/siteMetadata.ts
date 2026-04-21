@@ -61,7 +61,7 @@ export const author = {
   location: 'Lincoln',
   timeZone: 'American/Chicago',
   locationIcon: '',
-  status:'',
+  status:'-.- +.+ =.= @.@',
   position: 'Research Assistant',
   calMeetingUrl: '',
   workingOn: `I am exploring the intersection of bioinformatics and AI.`,
