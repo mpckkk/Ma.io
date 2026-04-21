@@ -58,7 +58,7 @@ export const socialAccounts = {
 
 export const author = {
   name: 'PengchongMa',
-  location: 'American',
+  location: 'Lincoln',
   timeZone: 'American/Chicago',
   locationIcon: '',
   position: 'Research Assistant',
