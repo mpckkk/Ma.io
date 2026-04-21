@@ -6,7 +6,7 @@ export const siteMetadata = {
   siteTitle: 'Coding Journey',
   siteScreenshot: '',
   siteDescription:
-    'Full Stack developer with research passion in bioinformatics (single cell omics) and machine learning, AI. Leveraging over 5 years of experience in tech, I create intuitive and high performance web applications with a focus on user interaction.',
+    '',
   author: 'Pengchong Ma',
   fullName: 'Pengchong Ma',
   location: 'Lincoln, NE, USA',
@@ -64,7 +64,7 @@ export const author = {
   position: 'Research Assistant',
   calMeetingUrl: '',
   status: '',
-  workingOn: `I am exploring the intersection of bioinformatics and AI, focusing on cutting edge data analysis and visualization techniques.`,
+  workingOn: `I am exploring the intersection of bioinformatics and AI.`,
   workTogether: `I’m open to new collaborations, especially in bioinformatics single cell. Feel free to Email me to discuss potential opportunities.`,
   wakatime: 'https://wakatime.com/@PengchongMa',
   github_accounts: [
