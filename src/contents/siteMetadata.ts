@@ -58,9 +58,9 @@ export const socialAccounts = {
 
 export const author = {
   name: 'PengchongMa',
-  location: 'Lincoln, NE, USA',
-  timeZone: 'America/Chicago',
-  locationIcon: '🇺🇸',
+  location: '',
+  timeZone: '',
+  locationIcon: '',
   position: 'Research Assistant',
   calMeetingUrl: '',
   status: '',
