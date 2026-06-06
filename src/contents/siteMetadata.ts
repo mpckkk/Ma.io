@@ -52,6 +52,8 @@ export const socialAccounts = {
   instagram: 'https://www.instagram.com/pcmmm_/',
   linkedin: 'https://www.linkedin.com/in/pengchong-m-18bb39135/',
   googlescholar: 'https://scholar.google.com/citations?hl=en&user=bNvdHHMAAAAJ',
+  email: 'pma5@unl.edu',
+  github: '',
 };
 
 export const author = {
