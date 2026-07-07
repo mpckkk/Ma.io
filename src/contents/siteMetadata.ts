@@ -65,7 +65,7 @@ export const author = {
   position: 'Research Assistant',
   calMeetingUrl: '',
   workingOn: `I am exploring the intersection of bioinformatics and AI.`,
-  workTogether: `I’m open to new collaborations, especially in bioinformatics single cell. Feel free to Email me to discuss potential opportunities.`,
+  workTogether: `I’m open to new collaborations, especially in bioinformatics. Feel free to Email me to discuss potential opportunities.`,
   wakatime: 'https://wakatime.com/@PengchongMa',
   github_accounts: [
     {
