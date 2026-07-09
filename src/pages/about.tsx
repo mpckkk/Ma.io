@@ -10,7 +10,7 @@ import { siteMetadata } from '@/contents/siteMetadata';
 import About from '@/modules/about';
 const PAGE_TITLE = 'About';
 const PAGE_DESCRIPTION =
-  `I am a Phd student at School of Computing, University of Nebraska Lincoln. I am fortunate to be advised by Prof. Qiuming Yao. I received my M.S. in Computer Science from Boston University in Dec 2021. Before coming to BU, I received my B.S. in Economic from San Diego State University in Dec 2018. My general research interest is Computer Science, Bioinformatics, Artificial Intelligence and Machine Learning. I am currently on the academic job market for research positions starting Fall 2027. If you find my research background a good fit, please feel free to reach out to me.`;
+  `I am a Phd student at School of Computing, University of Nebraska Lincoln. I am fortunate to be advised by Prof. Qiuming Yao. I received my M.S. in Computer Science from Boston University in Dec 2021. Before coming to BU, I received my B.A. in Economic from San Diego State University in Dec 2018. My general research interest is Computer Science, Bioinformatics, Artificial Intelligence and Machine Learning. I am currently on the academic job market for research positions starting Fall 2027. If you find my research background a good fit, please feel free to reach out to me.`;
 
 interface About {
   content: string;
