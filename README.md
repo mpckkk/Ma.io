@@ -3,9 +3,6 @@
   <p>🔥 Personal website was built originally from scratch using Next.js, TypeScript, Tailwind CSS, SWR, Firebase and Prisma with MySQL</p>
 </div>
 <br />
-
-![3-devices-black](https://github.com/aulianza/aulianza.id/assets/15605885/068cae0e-7867-4767-b558-80ee049c9f1b)
-
 Original Repository: [Click here](https://github.com/aulianza/aulianza.id)
 
 
