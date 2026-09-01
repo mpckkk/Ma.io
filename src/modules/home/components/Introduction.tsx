@@ -14,7 +14,6 @@ const Introduction = () => {
               Based in {author.location}{' '}
               <span className='ml-1'>{author.locationIcon}</span>
             </li>
-            <li>{author.status}</li>
           </ul>
         </div>
       </div>
